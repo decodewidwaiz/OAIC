@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>IEEE GLOBECOM 2026</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&amp;family=Source+Sans+3:wght@400;500;600;700&amp;family=Source+Serif+4:opsz,wght@8..60,400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-container": "#7fc5fd",
+                        "inverse-on-surface": "#f0f1f2",
+                        "primary-fixed": "#d6e3ff",
+                        "on-tertiary-container": "#0e9aca",
+                        "on-primary": "#ffffff",
+                        "tertiary-container": "#002c3d",
+                        "surface-bright": "#f8f9fa",
+                        "surface-container-low": "#f3f4f5",
+                        "tertiary-fixed": "#c1e8ff",
+                        "tertiary": "#001620",
+                        "on-secondary-fixed-variant": "#004b72",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed": "#001e2b",
+                        "outline": "#747780",
+                        "on-tertiary-fixed-variant": "#004d67",
+                        "on-background": "#191c1d",
+                        "on-error": "#ffffff",
+                        "surface": "#f8f9fa",
+                        "primary-fixed-dim": "#aac7fd",
+                        "on-error-container": "#93000a",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-primary": "#aac7fd",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-container": "#00517b",
+                        "outline-variant": "#c4c6d0",
+                        "on-surface-variant": "#43474f",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed-variant": "#284775",
+                        "on-primary-fixed": "#001b3d",
+                        "primary": "#001430",
+                        "surface-container-high": "#e7e8e9",
+                        "secondary-fixed": "#cce5ff",
+                        "secondary-fixed-dim": "#90cdff",
+                        "on-secondary-fixed": "#001e31",
+                        "background": "#f8f9fa",
+                        "surface-variant": "#e1e3e4",
+                        "surface-tint": "#415f8f",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-highest": "#e1e3e4",
+                        "surface-dim": "#d9dadb",
+                        "on-surface": "#191c1d",
+                        "surface-container": "#edeeef",
+                        "primary-container": "#002855",
+                        "on-primary-container": "#7490c3",
+                        "inverse-surface": "#2e3132",
+                        "secondary": "#006496",
+                        "tertiary-fixed-dim": "#73d1ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "base": "8px",
+                        "container-max": "1200px",
+                        "margin-mobile": "16px",
+                        "margin-desktop": "64px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "label-lg": ["Source Sans 3", "sans-serif"],
+                        "body-lg": ["Open Sans", "sans-serif"],
+                        "label-sm": ["Source Sans 3", "sans-serif"],
+                        "headline-lg": ["Source Serif 4", "serif"],
+                        "headline-md": ["Source Serif 4", "serif"],
+                        "display-lg": ["Source Serif 4", "serif"],
+                        "body-md": ["Open Sans", "sans-serif"]
+                    },
+                    "fontSize": {
+                        "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Open Sans', sans-serif; }
+        .font-headline-lg, .font-headline-md, .font-display-lg { font-family: 'Source Serif 4', serif; }
+        .font-label-lg, .font-label-sm { font-family: 'Source Sans 3', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col">
+<!-- Top Utility Bar (simulated from image) -->
+<div class="bg-primary text-on-primary text-xs py-1 px-4 flex justify-between items-center hidden md:flex border-b border-primary-container">
+<div class="flex gap-4">
+<a class="hover:underline opacity-80" href="#">IEEE.org</a>
+<a class="hover:underline opacity-80" href="#">IEEE Xplore Digital Library</a>
+<a class="hover:underline opacity-80" href="#">IEEE Standards</a>
+<a class="hover:underline opacity-80" href="#">IEEE Spectrum</a>
+<a class="hover:underline opacity-80" href="#">More Sites</a>
+</div>
+<div class="flex gap-4 items-center">
+<span class="opacity-80">IEEE ComSoc</span>
+<span class="font-bold">IEEE</span>
+</div>
+</div>
+<!-- TopNavBar from Shared Components JSON -->
+<header class="bg-primary dark:bg-primary-container text-on-primary dark:text-on-primary-container border-b border-primary-container/20 shadow-sm sticky top-0 z-50">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 mx-auto max-w-container-max flex-wrap md:flex-nowrap gap-4">
+<!-- Brand Logo -->
+<a class="font-headline-md text-headline-md font-bold text-on-primary flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-3xl" data-icon="language">language</span>
+                IEEE GLOBECOM 2026
+            </a>
+<!-- Navigation Links -->
+<nav class="hidden md:flex gap-6 items-center">
+<a class="font-label-lg text-label-lg text-on-primary border-b-2 border-secondary-container pb-1 opacity-90 transition-opacity" href="#">About</a> <!-- Assuming About is active since it's the homepage, or maybe it's just the default view. Let's make no active for a clean look, or follow JSON. JSON says: "style_active_navigation": "text-on-primary border-b-2 border-secondary-container pb-1". There is no specific active page indicated in prompt, defaulting to nothing active or maybe Home isn't in the list. The list is ["Authors", "Committees", "Program", "Registration", "Hotel & Travel", "About"]. I will leave all inactive except About for semantic purposes, or just all inactive if Home is intended. Let's just follow standard inactive for all. -->
+<a class="font-label-lg text-label-lg text-on-primary/80 hover:text-on-primary hover:bg-primary-container/50 transition-colors px-2 py-1 rounded" href="#">Authors</a>
+<a class="font-label-lg text-label-lg text-on-primary/80 hover:text-on-primary hover:bg-primary-container/50 transition-colors px-2 py-1 rounded" href="#">Committees</a>
+<a class="font-label-lg text-label-lg text-on-primary/80 hover:text-on-primary hover:bg-primary-container/50 transition-colors px-2 py-1 rounded" href="#">Program</a>
+<a class="font-label-lg text-label-lg text-on-primary/80 hover:text-on-primary hover:bg-primary-container/50 transition-colors px-2 py-1 rounded" href="#">Registration</a>
+<a class="font-label-lg text-label-lg text-on-primary/80 hover:text-on-primary hover:bg-primary-container/50 transition-colors px-2 py-1 rounded" href="#">Hotel &amp; Travel</a>
+</nav>
+<!-- Search and Action -->
+<div class="flex items-center gap-4 w-full md:w-auto justify-end">
+<div class="relative hidden sm:block">
+<input class="bg-surface text-on-surface border-0 rounded pl-4 pr-10 py-2 font-label-lg text-label-lg w-48 focus:ring-2 focus:ring-secondary focus:border-transparent" placeholder="Search" type="text"/>
+<span class="material-symbols-outlined absolute right-3 top-2.5 text-on-surface-variant" data-icon="search">search</span>
+</div>
+<button class="bg-[#C5A359] hover:bg-[#b08e48] text-white font-label-lg text-label-lg px-4 py-2 rounded transition-colors whitespace-nowrap">
+                    Submit Paper
+                </button>
+</div>
+</div>
+</header>
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="relative bg-tertiary-container text-on-tertiary pt-20 pb-32">
+<!-- Background Image -->
+<div class="absolute inset-0 z-0 overflow-hidden">
+<img class="w-full h-full object-cover opacity-40 mix-blend-overlay" data-alt="A sweeping, dramatic panoramic view of Macau, S.A.R., China at dusk, featuring the iconic Ruins of St. Paul's in the foreground against a modern, glowing city skyline. The sky is painted in rich, deep twilight blues and vibrant warm oranges, casting a majestic and historic yet technologically advanced mood. The lighting is cinematic, highlighting the intricate details of the historical architecture while contrasting with the sleek, modern high-rises in the background, all adhering to a formal, institutional academic aesthetic with high contrast and sharp details." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDw1Q3RTKeqFHxnetCYEFj0AvBIIMJaP668jHCYWpr87Jud4BOhpVTwGVoIYxk2SsPa21ZUrncvKenucEOTru1XsVZ_vGzQSwC-A2B9cbJ81o-3786wtRZ_S7ZdeTYQ4khThvt6SZrp7xH8ESWsGVHW2Q08xbKxHxUCcv0kyFq0na4rbJgwy_aRIMuU5P2Y0hDw6QtBDSo8K3E-qEfXoe4M4qh1Prc3YWKz4izmOR6zBXYkoVJ1dxlLdtLWjbsQYg5FWgS9CYHZpCc"/>
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="bg-primary-container/90 backdrop-blur-sm border border-secondary-container/20 p-8 md:p-12 max-w-3xl rounded shadow-lg">
+<h1 class="font-display-lg text-display-lg text-on-primary mb-4">IEEE GLOBECOM 2026</h1>
+<p class="font-headline-md text-headline-md text-secondary-container mb-2">Macau S.A.R., China</p>
+<p class="font-body-lg text-body-lg text-on-primary-container mb-8">7 - 11 December 2026</p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-[#C5A359] hover:bg-[#b08e48] text-white font-label-lg text-label-lg px-6 py-3 rounded shadow-md transition-all">
+                            Submit a Paper
+                        </button>
+<button class="bg-surface hover:bg-surface-container text-primary font-label-lg text-label-lg px-6 py-3 rounded shadow-md border border-outline-variant transition-all">
+                            Call for Papers
+                        </button>
+<button class="bg-transparent border border-secondary-container hover:bg-secondary-container/10 text-on-primary font-label-lg text-label-lg px-6 py-3 rounded transition-all">
+                            Become a Patron/Exhibitor
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- News & Announcements -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12 md:py-16">
+<div class="bg-surface border border-outline-variant rounded p-8 md:p-10 shadow-sm border-l-4 border-l-secondary">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4 flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary" data-icon="campaign" data-weight="fill">campaign</span>
+                    News and Announcements
+                </h2>
+<a class="font-headline-md text-headline-md text-secondary hover:text-primary-container hover:underline transition-colors block" href="#">
+                    IEEE GLOBECOM 2026 Call for Papers Announced
+                </a>
+</div>
+</section>
+<!-- Important Dates -->
+<section class="bg-surface-container-low py-16">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center bg-surface border border-outline-variant rounded overflow-hidden shadow-sm">
+<!-- Graphic Side -->
+<div class="relative h-64 lg:h-full min-h-[300px] bg-primary-container">
+<img class="absolute inset-0 w-full h-full object-cover opacity-60 mix-blend-luminosity" data-alt="A sleek, high-tech abstract conceptual image representing time and technology. A glowing, stylized digital clock face or complex circular interface is centrally featured, overlaid on a deep primary blue background. A human hand, silhouetted in dramatic low-key lighting, reaches out to touch or interact with the glowing interface. The mood is cutting-edge, scholarly, and precise, perfectly aligned with a formal telecommunications conference aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrS62fAPLqvjBGSrTOC8apNRgar9pn9ri3IcY6aMQ9gTdz_IDCAKWn1x7cT_wHjjqz4K968FFFBRMhHmjNtL7nL3Dxp8w5Icv-kr_0wWux_yf2GmLZrZXlY7VW-h2YOa8OInFLI22S1BATSW_GAXkyrogKDW7ItLfrLvY8qks6p_o-uvZKcRjJUEl1ARWQvIZJyFn5S3-brHULUiYnd0kL7tkAglQ-2jAfSeDtRwvWEmG7ixL9E8c3A3UlWLBxQfEheFWQ1JORNwU"/>
+<div class="absolute inset-0 flex items-center justify-center p-8 bg-gradient-to-r from-primary-container to-transparent">
+<h2 class="font-headline-lg text-headline-lg text-on-primary">Important Dates</h2>
+</div>
+</div>
+<!-- Dates List -->
+<div class="p-8 flex flex-col gap-4">
+<!-- Date Item -->
+<div class="flex flex-col sm:flex-row border border-outline-variant rounded bg-surface hover:border-primary transition-colors group">
+<div class="bg-primary text-on-primary p-4 sm:w-40 flex items-center justify-center font-label-lg text-label-lg group-hover:bg-primary-container transition-colors">
+                                03 May 2026
+                            </div>
+<div class="p-4 flex-1 flex flex-col justify-center">
+<span class="font-label-lg text-label-lg text-on-surface">Paper Submission Deadline:</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Firm Deadline</span>
+</div>
+</div>
+<!-- Date Item -->
+<div class="flex flex-col sm:flex-row border border-outline-variant rounded bg-surface hover:border-primary transition-colors group">
+<div class="bg-primary text-on-primary p-4 sm:w-40 flex items-center justify-center font-label-lg text-label-lg group-hover:bg-primary-container transition-colors">
+                                15 Mar 2026
+                            </div>
+<div class="p-4 flex-1 flex flex-col justify-center">
+<span class="font-label-lg text-label-lg text-on-surface">Tutorial Proposals</span>
+</div>
+</div>
+<!-- Date Item -->
+<div class="flex flex-col sm:flex-row border border-outline-variant rounded bg-surface hover:border-primary transition-colors group">
+<div class="bg-primary text-on-primary p-4 sm:w-40 flex items-center justify-center font-label-lg text-label-lg group-hover:bg-primary-container transition-colors">
+                                15 May 2026
+                            </div>
+<div class="p-4 flex-1 flex flex-col justify-center">
+<span class="font-label-lg text-label-lg text-on-surface">IF&amp;E Proposals</span>
+</div>
+</div>
+<!-- Date Item -->
+<div class="flex flex-col sm:flex-row border border-outline-variant rounded bg-surface hover:border-primary transition-colors group">
+<div class="bg-primary text-on-primary p-4 sm:w-40 flex items-center justify-center font-label-lg text-label-lg group-hover:bg-primary-container transition-colors">
+                                01 Mar 2026
+                            </div>
+<div class="p-4 flex-1 flex flex-col justify-center">
+<span class="font-label-lg text-label-lg text-on-surface">Workshop Proposals:</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Deadline Extended</span>
+</div>
+</div>
+<div class="mt-4 flex justify-end">
+<button class="bg-secondary hover:bg-secondary-container hover:text-on-secondary-container text-on-secondary font-label-lg text-label-lg px-6 py-2 rounded transition-colors shadow-sm">
+                                See All Dates
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Welcome Section -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16">
+<div class="border-l-4 border-l-[#C5A359] pl-6 md:pl-10">
+<h2 class="font-display-lg text-display-lg text-primary mb-6">Welcome to IEEE GLOBECOM 2026!</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed max-w-4xl">
+                    IEEE Global Communications Conference (GLOBECOM), a flagship IEEE Communications Society event, gathers top experts to drive innovation and advance nearly every aspect of communications technology. Each year, thousands of the most groundbreaking contributions are selected for this conference program. This premier event features technical papers, tutorials, workshops, and industry sessions designed to push the boundaries of telecommunications technologies, systems, and infrastructure. GLOBECOM continues to shape the future of communications technologies, enabling high-speed, seamless, and cost-effective global telecommunications services globally for all.
+                </p>
+</div>
+</section>
+<!-- Destination Section -->
+<section class="bg-surface-bright py-16 border-t border-outline-variant/30">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<!-- Image -->
+<div class="rounded overflow-hidden shadow-md border border-outline-variant bg-surface p-2">
+<img alt="Macau Skyline" class="w-full h-auto object-cover rounded" data-alt="A pristine, wide-angle photograph of the modern Macau skyline reflecting beautifully on a calm body of water at twilight. The scene is brightly lit with city lights creating a vibrant contrast against the deepening purple and blue sky. The image should convey a sense of international prestige, technological advancement, and welcoming hospitality, suitable for a premier global conference destination feature. The colors should harmonize with deep blues and bright accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsjO1lI9yRn61LML43kDJEQww80AM567bzSxSbXjPqDFWhWJmAufytIRCLBpKhtoqOofUmuj9JmMw0AsXKT7v2KXg6ZxiqZKEK3DgkdyUc2aTGIBKrLuFZlhc81M_Lf29x8jP0Hfx1AHTTKXQGo4vMeJCRN6xojksaoK3QKuTputzdUbhkjfHJZlID-KTnmJ5XgFHXw0MD_RlHMK4bud4310l51gUfhUgeneongLlu7RjebPO6hF1CiraMsZq-5rQBUS14Np8iqTQ"/>
+</div>
+<!-- Content -->
+<div class="border-l-4 border-l-[#C5A359] pl-8 py-4">
+<h2 class="font-display-lg text-display-lg text-primary mb-2">The Destination</h2>
+<p class="font-headline-md text-headline-md text-secondary-container mb-8">Macau S.A.R., China</p>
+<h3 class="font-headline-lg text-headline-lg text-primary mb-6">Travel Information</h3>
+<div class="flex flex-wrap gap-4">
+<button class="bg-secondary hover:bg-secondary-container hover:text-on-secondary-container text-on-secondary font-label-lg text-label-lg px-6 py-3 rounded shadow-sm transition-colors">
+                                Hotel &amp; Travel
+                            </button>
+<button class="bg-surface hover:bg-surface-container text-primary font-label-lg text-label-lg px-6 py-3 rounded border border-outline-variant shadow-sm transition-colors">
+                                Visa Information
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer from Shared Components JSON -->
+<footer class="bg-primary dark:bg-primary-container text-on-primary dark:text-on-primary-container border-t border-secondary-container/10 mt-auto">
+<!-- Main Footer Content -->
+<div class="w-full py-12 px-margin-mobile md:px-margin-desktop mx-auto max-w-container-max grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<!-- Brand Column -->
+<div class="col-span-1 md:col-span-1 flex flex-col gap-4">
+<a class="font-headline-md text-headline-md font-bold text-on-primary flex items-center gap-2 mb-4" href="#">
+<span class="material-symbols-outlined text-4xl" data-icon="language">language</span>
+<div>
+<div class="text-sm font-normal opacity-80 leading-tight">IEEE</div>
+<div class="leading-tight">GLOBECOM®</div>
+</div>
+</a>
+<a class="font-label-lg text-label-lg text-secondary-container hover:text-on-primary transition-colors flex items-center gap-1 group" href="#">
+                    Submit a Paper 
+                    <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<!-- Navigation Column 1 -->
+<div class="col-span-1 md:col-span-1 flex flex-col gap-3">
+<a class="font-body-md text-body-md text-on-primary/70 hover:text-on-primary transition-colors" href="#">Program</a>
+<a class="font-body-md text-body-md text-on-primary/70 hover:text-on-primary transition-colors" href="#">Committees</a>
+<a class="font-body-md text-body-md text-on-primary/70 hover:text-on-primary transition-colors" href="#">Hotel &amp; Travel</a>
+</div>
+<!-- Navigation Column 2 -->
+<div class="col-span-1 md:col-span-1 flex flex-col gap-3">
+<a class="font-body-md text-body-md text-on-primary/70 hover:text-on-primary transition-colors" href="#">About</a>
+<a class="font-body-md text-body-md text-on-primary/70 hover:text-on-primary transition-colors" href="#">Contact</a>
+</div>
+<!-- Social Column (Not explicitly in JSON links array, but implied by standard footer and image) -->
+<div class="col-span-1 md:col-span-1 flex flex-col gap-4 items-start md:items-end">
+<!-- Social icons simulated -->
+<div class="flex gap-4">
+<a class="text-on-primary hover:text-secondary-container transition-colors" href="#"><svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path></svg></a>
+<a class="text-on-primary hover:text-secondary-container transition-colors" href="#"><svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24"><path clip-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" fill-rule="evenodd"></path></svg></a>
+<a class="text-on-primary hover:text-secondary-container transition-colors" href="#"><svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24"><path clip-rule="evenodd" d="M19.812 5.418c.861.23 1.538.907 1.768 1.768C21.998 8.746 22 12 22 12s0 3.255-.418 4.814a2.504 2.504 0 0 1-1.768 1.768c-1.56.419-7.814.419-7.814.419s-6.255 0-7.814-.419a2.505 2.505 0 0 1-1.768-1.768C2 15.255 2 12 2 12s0-3.255.417-4.814a2.507 2.507 0 0 1 1.768-1.768C5.744 5 11.998 5 11.998 5s6.255 0 7.814.418ZM15.194 12 10 15V9l5.194 3Z" fill-rule="evenodd"></path></svg></a>
+</div>
+</div>
+</div>
+<!-- Secondary Footer (Legal) from JSON -->
+<div class="bg-tertiary-container w-full py-4 px-margin-mobile md:px-margin-desktop text-center md:text-left flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="font-label-sm text-label-sm text-on-primary/70">
+                © IEEE GLOBECOM 2026. All rights reserved.
+            </div>
+<div class="flex flex-wrap justify-center md:justify-end gap-x-6 gap-y-2">
+<!-- Links from JSON -->
+<a class="font-label-sm text-label-sm text-on-primary/70 hover:text-on-primary transition-colors" href="#">Accessibility</a>
+<a class="font-label-sm text-label-sm text-on-primary/70 hover:text-on-primary transition-colors" href="#">Sitemap</a>
+<a class="font-label-sm text-label-sm text-on-primary/70 hover:text-on-primary transition-colors" href="#">Contact &amp; Support</a>
+<a class="font-label-sm text-label-sm text-on-primary/70 hover:text-on-primary transition-colors" href="#">Nondiscrimination Policy</a>
+<a class="font-label-sm text-label-sm text-on-primary/70 hover:text-on-primary transition-colors" href="#">IEEE Ethics Reporting</a>
+<a class="font-label-sm text-label-sm text-on-primary/70 hover:text-on-primary transition-colors" href="#">IEEE Privacy Policy</a>
+<a class="font-label-sm text-label-sm text-on-primary/70 hover:text-on-primary transition-colors" href="#">Terms</a>
+</div>
+</div>
+</footer>
+<!-- Cookie Consent Simulated -->
+<div class="fixed bottom-0 left-0 w-full bg-surface-container-high border-t border-outline-variant p-4 z-50 flex flex-col sm:flex-row justify-between items-center gap-4 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] hidden"> <!-- hidden by default to match clean state, remove hidden class to show -->
+<p class="font-body-md text-body-md text-on-surface text-sm max-w-4xl">
+            This website utilizes technologies such as cookies to enable essential site functionality, as well as for analytics, personalization, and targeted advertising. To learn more, view the following link: <a class="text-secondary hover:underline" href="#">Privacy Policy</a>
+</p>
+<button class="bg-primary hover:bg-primary-container text-on-primary font-label-sm text-label-sm px-6 py-2 rounded whitespace-nowrap">
+            Manage Preferences
+        </button>
+<button class="absolute top-2 right-2 text-on-surface-variant hover:text-on-surface">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</button>
+</div>
+</body></html>
