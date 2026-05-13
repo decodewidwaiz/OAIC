@@ -4,16 +4,14 @@ import {
   Calendar,
   FileDown,
   Check,
-  Users,
-  Target,
-  FileText,
+  
 } from 'lucide-react';
 import Section from '@/components/layout/Section';
 import SectionHeader from '@/components/layout/SectionHeader';
 import {
   Card,
   CardContent,
-  CardDescription,
+  
   CardHeader,
   CardTitle,
 } from '@/components/ui/Card';
@@ -125,10 +123,10 @@ export default function WorkshopProposalsPage() {
 
           <div className="mt-16 text-center">
             <div className="flex flex-wrap justify-center gap-4">
-              <Button size="lg" asChild>
+              <Button as="a" size="lg">
                 <a href="#">Submit Workshop Proposal</a>
               </Button>
-              <Button size="lg" variant="secondary" asChild>
+              <Button as="a" size="lg" variant="secondary">
                 <a href="#">
                   <FileDown className="mr-2 h-4 w-4" />
                   Download Template

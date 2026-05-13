@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import type { Speaker } from '@/types';
 
 interface SpeakerCardProps {

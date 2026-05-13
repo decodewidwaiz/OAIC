@@ -108,7 +108,7 @@ export default function VisaPage() {
                         {row.country}
                       </TableCell>
                       <TableCell>
-                        <Badge variant="secondary">{row.type}</Badge>
+                        <Badge>{row.type}</Badge>
                       </TableCell>
                       <TableCell>{row.notes}</TableCell>
                     </TableRow>
@@ -142,7 +142,7 @@ export default function VisaPage() {
           </Card>
 
           <div className="flex flex-wrap justify-center gap-4">
-            <Button asChild size="lg">
+            <Button as="a" size="lg">
               <a
                 href="https://indianvisaonline.gov.in"
                 target="_blank"
@@ -151,7 +151,7 @@ export default function VisaPage() {
                 <ExternalLink className="mr-2 h-4 w-4" /> Indian e-Visa Portal
               </a>
             </Button>
-            <Button asChild variant="secondary" size="lg">
+            <Button as="a" variant="secondary" size="lg">
               <a href="mailto:info@oaic2024.in?subject=Invitation Letter Request">
                 Request Invitation Letter
               </a>

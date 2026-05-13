@@ -1,14 +1,15 @@
 import type { Metadata } from 'next';
 import PageHeader from '@/components/layout/PageHeader';
 import { contactInfo } from '@/data/contact';
-import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+import { MapPin, Phone } from 'lucide-react';
 import Section from '@/components/layout/Section';
 import ContactForm from '@/components/forms/ContactForm';
 import SectionHeader from '@/components/layout/SectionHeader';
 import {
   Card,
-  CardContent,
   CardDescription,
+  CardContent,
+  
   CardHeader,
   CardTitle,
 } from '@/components/ui/Card';
@@ -42,12 +43,6 @@ const contactCategories = [
   },
 ];
 
-const socialIcons = {
-  /* twitter: Twitter,
-  linkedin: Linkedin,
-  instagram: Instagram,
-  youtube: Youtube, */
-};
 
 export default function ContactPage() {
   return (

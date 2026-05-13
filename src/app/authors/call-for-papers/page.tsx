@@ -7,7 +7,7 @@ import SectionHeader from '@/components/layout/SectionHeader';
 import {
   Card,
   CardContent,
-  CardDescription,
+  
   CardHeader,
   CardTitle,
 } from '@/components/ui/Card';
@@ -90,7 +90,7 @@ export default function CallForPapersPage() {
                   <CardTitle>{type.type}</CardTitle>
                 </CardHeader>
                 <CardContent className="flex-1">
-                  <Badge variant="secondary" className="mb-2">
+                  <Badge className="mb-2">
                     {type.pages}
                   </Badge>
                   <p className="text-sm text-muted-foreground">
@@ -102,7 +102,7 @@ export default function CallForPapersPage() {
           </div>
 
           <div className="text-center">
-            <Button size="lg" asChild>
+            <Button as="a" size="lg">
               <a href="#" target="_blank" rel="noopener noreferrer">
                 Submit via EasyChair
               </a>

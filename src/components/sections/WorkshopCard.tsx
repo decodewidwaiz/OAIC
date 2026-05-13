@@ -19,7 +19,7 @@ export default function WorkshopCard({ workshop }: WorkshopCardProps) {
     <Card className="flex flex-col">
       <CardHeader>
         <div className="mb-3 flex flex-wrap items-center gap-2">
-          <Badge variant="secondary">Workshop</Badge>
+          <Badge>Workshop</Badge>
           <span className="flex items-center gap-1.5 text-sm text-muted-foreground">
             <Clock className="h-4 w-4" /> Day {workshop.day} — {workshop.time}
           </span>

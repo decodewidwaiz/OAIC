@@ -3,7 +3,6 @@ import PageHeader from '@/components/layout/PageHeader';
 import WorkshopCard from '@/components/sections/WorkshopCard';
 import { workshops } from '@/data/program';
 import Section from '@/components/layout/Section';
-import SectionHeader from '@/components/layout/SectionHeader';
 
 export const metadata: Metadata = {
   title: 'Workshops',

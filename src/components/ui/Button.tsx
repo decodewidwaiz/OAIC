@@ -5,15 +5,14 @@ import Link from 'next/link';
 interface IButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
   size?: 'sm' | 'md' | 'lg';
-  as?: typeof Link | 'a';
-  asChild?: boolean;
+   as?: typeof Link | 'a';
   href?: string;
 }
 
 export const Button = React.forwardRef<
   HTMLButtonElement,
   IButtonProps
->(({ as, asChild, variant = 'primary', size = 'md', className, href, ...props }, ref) => {
+>(({ as, variant = 'primary', size = 'md', className, href, ...props }, ref) => {
   const base =
     'inline-flex items-center justify-center font-semibold tracking-wide rounded-md transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-60 disabled:cursor-not-allowed';
 

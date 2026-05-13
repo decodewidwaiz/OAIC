@@ -15,15 +15,6 @@ interface AttractionCardProps {
   attraction: TouristAttraction;
 }
 
-const categoryVariant: Record<
-  string,
-  'default' | 'secondary' | 'destructive' | 'outline'
-> = {
-  heritage: 'default',
-  nature: 'secondary',
-  religious: 'default',
-  museum: 'outline',
-};
 
 export default function AttractionCard({ attraction }: AttractionCardProps) {
   return (
@@ -37,7 +28,7 @@ export default function AttractionCard({ attraction }: AttractionCardProps) {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
         <div className="absolute bottom-4 left-4">
-          <Badge variant={categoryVariant[attraction.category] || 'default'}>
+          <Badge>
             {attraction.category.charAt(0).toUpperCase() +
               attraction.category.slice(1)}
           </Badge>

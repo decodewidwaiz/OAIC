@@ -1,13 +1,12 @@
 'use client';
 
-import { useForm } from 'react-hook-form';
+import { useForm, Controller } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
 import { Button } from '@/components/ui/Button';
 import {
   Form,
   FormControl,
-  FormField,
   FormItem,
   FormLabel,
   FormMessage,
@@ -23,7 +22,10 @@ const formSchema = z.object({
   message: z.string().min(10, 'Message must be at least 10 characters.'),
 });
 
+import { useState, useEffect } from 'react';
+
 export default function ContactForm() {
+  const [mailtoLink, setMailtoLink] = useState<string | null>(null);
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -35,22 +37,29 @@ export default function ContactForm() {
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    const subject = encodeURIComponent(
-      values.subject || `Contact from ${values.name}`,
-    );
-    const body = encodeURIComponent(
-      `Name: ${values.name}\nEmail: ${values.email}\n\nMessage:\n${values.message}`,
-    );
-    window.location.href = `mailto:${contactInfo.generalEmail}?subject=${subject}&body=${body}`;
+  const mailSubject = encodeURIComponent(values.subject || `Contact from ${values.name}`);
+  const mailBody = encodeURIComponent(
+    `Name: ${values.name}\nEmail: ${values.email}\n\nMessage:\n${values.message}`,
+  );
+  setMailtoLink(`mailto:${contactInfo.generalEmail}?subject=${mailSubject}&body=${mailBody}`);
+}
+
+useEffect(() => {
+  if (mailtoLink) {
+    window.location.href = mailtoLink;
+    // Clear mailtoLink after navigation in a defer, to avoid cascading renders
+    setTimeout(() => setMailtoLink(null), 0);
   }
+}, [mailtoLink]);
+
 
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-        <FormField
+        <Controller
           control={form.control}
           name="name"
-          render={({ field }: any) => (
+          render={({ field }) => (
             <FormItem>
               <FormLabel>Full Name</FormLabel>
               <FormControl>
@@ -60,10 +69,10 @@ export default function ContactForm() {
             </FormItem>
           )}
         />
-        <FormField
+        <Controller
           control={form.control}
           name="email"
-          render={({ field }: any) => (
+          render={({ field }) => (
             <FormItem>
               <FormLabel>Email Address</FormLabel>
               <FormControl>
@@ -73,10 +82,10 @@ export default function ContactForm() {
             </FormItem>
           )}
         />
-        <FormField
+        <Controller
           control={form.control}
           name="subject"
-          render={({ field }: any) => (
+          render={({ field }) => (
             <FormItem>
               <FormLabel>Subject</FormLabel>
               <FormControl>
@@ -86,10 +95,10 @@ export default function ContactForm() {
             </FormItem>
           )}
         />
-        <FormField
+        <Controller
           control={form.control}
           name="message"
-          render={({ field }: any) => (
+          render={({ field }) => (
             <FormItem>
               <FormLabel>Message</FormLabel>
               <FormControl>

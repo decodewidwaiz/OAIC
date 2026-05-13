@@ -5,12 +5,12 @@ import SectionHeader from '@/components/layout/SectionHeader';
 import {
   Card,
   CardContent,
-  CardDescription,
+  
   CardHeader,
   CardTitle,
 } from '@/components/ui/Card';
 import { Button } from '@/components/ui/Button';
-import { Check, Calendar, AlertTriangle } from 'lucide-react';
+import { Check, Calendar } from 'lucide-react';
 import { Alert, AlertTitle, AlertDescription } from '@/components/ui/Alert';
 
 export const metadata: Metadata = {
@@ -125,7 +125,7 @@ export default function CallForPostersPage() {
           </Alert>
 
           <div className="mt-12 text-center">
-            <Button size="lg" asChild>
+            <Button as="a" size="lg">
               <a href="#">Submit Poster Abstract</a>
             </Button>
           </div>

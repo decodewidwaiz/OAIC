@@ -6,13 +6,13 @@ import {
   TabsList,
   TabsTrigger,
 } from '@/components/ui/Tabs';
-import { FileDown, Check, AlertTriangle } from 'lucide-react';
+import { FileDown, AlertTriangle } from 'lucide-react';
 import Section from '@/components/layout/Section';
 import { Button } from '@/components/ui/Button';
 import {
   Card,
   CardContent,
-  CardDescription,
+  
   CardHeader,
   CardTitle,
 } from '@/components/ui/Card';
@@ -71,12 +71,12 @@ function FormattingGuidelines() {
         ))}
       </div>
       <div className="flex flex-wrap gap-4">
-        <Button asChild>
+        <Button as="a">
           <a href="#">
             <FileDown className="mr-2 h-4 w-4" /> LaTeX Template
           </a>
         </Button>
-        <Button asChild variant="secondary">
+        <Button as="a" variant="secondary">
           <a href="#">
             <FileDown className="mr-2 h-4 w-4" /> Word Template
           </a>

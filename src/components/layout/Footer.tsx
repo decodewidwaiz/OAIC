@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { X as Twitter, Briefcase as Linkedin, MessageSquare as Facebook, PlaySquare as Youtube, Camera as Instagram } from 'lucide-react';
 
 const socialLinks = [
@@ -41,7 +42,7 @@ export default function Footer() {
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
             <div className="col-span-2 lg:col-span-2">
               <Link href="/" className="mb-4 inline-block">
-                <img src="/logo-white.svg" alt="IEEE GLOBECOM Logo" className="h-14" />
+                <Image src="/logo-white.svg" alt="IEEE GLOBECOM Logo" className="h-14" width={168} height={56} priority />
               </Link>
               <Link href="/authors/submission-guidelines" className="text-accent-cyan hover:underline font-semibold flex items-center gap-2">
                 Submit a Paper →
@@ -92,7 +93,7 @@ export default function Footer() {
       {/* IEEE Copyright Bar */}
       <div className="bg-gray-100 text-gray-600 text-xs py-3">
         <div className="container-wide text-center md:text-left">
-          <p>&copy; Copyright {currentYear} IEEE – All rights reserved. A public charity, IEEE is the world's largest technical professional organization dedicated to advancing technology for the benefit of humanity.</p>
+          <p>&copy; Copyright {currentYear} IEEE – All rights reserved. A public charity, IEEE is the world&rsquo;s largest technical professional organization dedicated to advancing technology for the benefit of humanity.</p>
         </div>
       </div>
     </footer>

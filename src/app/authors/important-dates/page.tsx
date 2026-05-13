@@ -19,12 +19,6 @@ export const metadata: Metadata = {
     'Key deadlines for paper submission, notification, camera-ready, and registration for OAIC 2024.',
 };
 
-const statusVariantMap = {
-  open: 'default',
-  closed: 'destructive',
-  upcoming: 'secondary',
-  extended: 'default',
-} as const;
 
 export default function ImportantDatesPage() {
   return (
@@ -77,10 +71,7 @@ export default function ImportantDatesPage() {
                                 >
                                   {date.date}
                                 </time>
-                                <Badge
-                                  variant={statusVariantMap[date.status]}
-                                  className="w-24 justify-center"
-                                >
+<Badge className="w-24 justify-center">
                                   {date.status.charAt(0).toUpperCase() +
                                     date.status.slice(1)}
                                 </Badge>

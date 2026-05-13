@@ -1,5 +1,6 @@
 import { cn } from '@/lib/cn';
 import { ReactNode } from 'react';
+import Image from 'next/image';
 
 export function Avatar({ children, className }: { children: ReactNode; className?: string }) {
   return (
@@ -9,8 +10,8 @@ export function Avatar({ children, className }: { children: ReactNode; className
   );
 }
 
-export function AvatarImage({ src, alt, className }: { src: string; alt?: string; className?: string }) {
-  return <img src={src} alt={alt} className={cn("aspect-square h-full w-full", className)} />;
+export function AvatarImage({ src, alt, className }: { src?: string; alt?: string; className?: string }) {
+  return <Image src={src ?? '/avatar-fallback.png'} alt={alt ?? ''} className={cn('aspect-square h-full w-full', className)} width={40} height={40} />;
 }
 
 export function AvatarFallback({ children, className }: { children: ReactNode; className?: string }) {

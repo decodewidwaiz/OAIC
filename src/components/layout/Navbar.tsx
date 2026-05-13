@@ -1,13 +1,13 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useState, useRef, useEffect } from 'react';
 import { ChevronDown, Menu, X, Search } from 'lucide-react';
 import { navConfig } from '@/data/nav';
 import { cn } from '@/lib/cn';
 import type { NavItem } from '@/types';
-import { Button } from '@/components/ui/Button';
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -23,14 +23,8 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const [prevPathname, setPrevPathname] = useState(pathname);
+// Removed effect that set state synchronously on pathname change, as per React best practices. (Reset should be handled via explicit handlers on navigation.)
 
-  if (pathname !== prevPathname) {
-    setPrevPathname(pathname);
-    setMobileOpen(false);
-    setActiveDropdown(null);
-    if (timeoutRef.current) clearTimeout(timeoutRef.current);
-  }
 
   const handleMouseEnter = (label: string) => {
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
@@ -63,10 +57,10 @@ export default function Navbar() {
             <span>More Sites</span>
             <div className="h-4 w-px bg-primary-700" />
             <Link href="https://www.comsoc.org" target="_blank" rel="noopener noreferrer">
-              <img src="/comsoc-logo.png" alt="IEEE ComSoc" className="h-6" />
+              <Image src="/comsoc-logo.png" alt="IEEE ComSoc" className="h-6" width={100} height={24} />
             </Link>
             <Link href="https://www.ieee.org" target="_blank" rel="noopener noreferrer">
-              <img src="/ieee-logo.png" alt="IEEE" className="h-6" />
+              <Image src="/ieee-logo.png" alt="IEEE" className="h-6" width={80} height={24} />
             </Link>
           </div>
         </div>
@@ -81,7 +75,7 @@ export default function Navbar() {
       >
         <div className="container-wide flex items-center justify-between py-4">
           <Link href="/" className="flex items-center gap-3" aria-label="IEEE GLOBECOM 2026 - Home">
-            <img src="/logo.svg" alt="IEEE GLOBECOM 2026 Logo" className="h-12" />
+            <Image src="/logo.svg" alt="IEEE GLOBECOM 2026 Logo" className="h-12" width={160} height={48} priority />
           </Link>
 
           <nav className="hidden lg:flex items-center" aria-label="Primary navigation">
@@ -160,7 +154,7 @@ export default function Navbar() {
         <div className="relative flex flex-col w-full max-w-xs h-full bg-white shadow-xl">
           <div className="flex items-center justify-between px-4 py-3 border-b">
             <Link href="/" className="flex items-center gap-2">
-              <img src="/logo.svg" alt="IEEE GLOBECOM 2026 Logo" className="h-10" />
+              <Image src="/logo.svg" alt="IEEE GLOBECOM 2026 Logo" className="h-10" width={120} height={40} />
             </Link>
             <button onClick={() => setMobileOpen(false)} className="p-2 text-gray-500" aria-label="Close menu">
               <X className="w-6 h-6" />

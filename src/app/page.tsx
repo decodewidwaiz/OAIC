@@ -1,11 +1,9 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import HeroSection from '@/components/sections/HeroSection';
-import SectionHeading from '@/components/ui/SectionHeading';
 import { Button } from '@/components/ui/Button';
-import { keynoteSpeakers } from '@/data/speakers';
 import { importantDates as dates } from '@/data/dates';
-import { topics } from '@/data/callForPapers';
 
 export const metadata: Metadata = {
   title: 'IEEE GLOBECOM 2026 — Macau S.A.R., China',
@@ -95,11 +93,14 @@ export default function HomePage() {
             <div className="absolute top-0 right-0 w-1/2 h-1/3 border-t-2 border-r-2 border-accent-orange pointer-events-none" />
 
             <div className="w-full md:w-1/2">
-              <img 
-                src="/destination-macau.jpg" 
-                alt="Night skyline of Macau"
-                className="w-full shadow-md"
-              />
+<Image 
+                    src="/destination-macau.jpg" 
+                    alt="Night skyline of Macau"
+                    className="w-full shadow-md"
+                    width={800}
+                    height={450}
+                    priority
+                  />
             </div>
             <div className="w-full md:w-1/2 pt-4">
               <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-2">The Destination</h2>

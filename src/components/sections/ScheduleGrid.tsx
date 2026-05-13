@@ -1,10 +1,8 @@
 'use client';
 
-import { useState } from 'react';
 import { schedule } from '@/data/program';
-import { cn } from '@/lib/cn';
 import { Badge } from '@/components/ui/Badge';
-import { Clock, MapPin, User, Mic } from 'lucide-react';
+import { Clock, MapPin, Mic } from 'lucide-react';
 import {
   Tabs,
   TabsContent,
@@ -13,11 +11,7 @@ import {
 } from '@/components/ui/Tabs';
 import {
   Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
+
 } from '@/components/ui/Card';
 
 const dayLabels: Record<number, string> = {
@@ -26,16 +20,7 @@ const dayLabels: Record<number, string> = {
   3: 'Day 3',
 };
 
-const typeVariantMap: Record<
-  string,
-  'default' | 'secondary' | 'destructive' | 'outline'
-> = {
-  keynote: 'default',
-  workshop: 'secondary',
-  panel: 'outline',
-  break: 'secondary',
-  social: 'default',
-};
+
 
 export default function ScheduleGrid() {
   return (
@@ -62,10 +47,7 @@ export default function ScheduleGrid() {
                     </div>
                   </div>
                   <div className="flex-1 p-6 pt-0 md:pt-6">
-                    <Badge
-                      variant={typeVariantMap[slot.type] || 'secondary'}
-                      className="mb-2"
-                    >
+<Badge className="mb-2">
                       {slot.type}
                     </Badge>
                     <h3 className="text-lg font-semibold">{slot.title}</h3>

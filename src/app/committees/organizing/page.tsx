@@ -3,7 +3,6 @@ import PageHeader from '@/components/layout/PageHeader';
 import CommitteeMemberCard from '@/components/sections/CommitteeMemberCard';
 import { organizingCommittee } from '@/data/committees';
 import Section from '@/components/layout/Section';
-import SectionHeader from '@/components/layout/SectionHeader';
 
 export const metadata: Metadata = {
   title: 'Organizing Committee',

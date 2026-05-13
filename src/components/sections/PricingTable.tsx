@@ -7,7 +7,7 @@ import {
 import {
   Table,
   TableBody,
-  TableCaption,
+  
   TableCell,
   TableHead,
   TableHeader,
@@ -21,8 +21,7 @@ import {
   CardTitle,
 } from '@/components/ui/Card';
 import { Button } from '@/components/ui/Button';
-import { pricingTiers, registrationIncludes } from '@/data/registration';
-import { Check, X } from 'lucide-react';
+import { pricingTiers } from '@/data/registration';
 
 export default function PricingTable() {
   return (

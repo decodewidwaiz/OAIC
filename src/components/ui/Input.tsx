@@ -1,9 +1,11 @@
-import { InputHTMLAttributes, forwardRef } from 'react';
+import { forwardRef } from 'react';
 import { cn } from '@/lib/cn';
 
-export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {}
+// You can use InputHTMLAttributes<HTMLInputElement> directly without an empty interface. Remove this line or export the base type if desired.
 
-export const Input = forwardRef<HTMLInputElement, InputProps>(
+import type { InputHTMLAttributes } from 'react';
+
+export const Input = forwardRef<HTMLInputElement, InputHTMLAttributes<HTMLInputElement>>(
   ({ className, type, ...props }, ref) => {
     return (
       <input
