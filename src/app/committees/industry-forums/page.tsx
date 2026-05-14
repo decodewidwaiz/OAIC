@@ -23,10 +23,12 @@ export default function IndustryForumsCommitteePage() {
         ]}
       />
       <Section>
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-          {industryForumsCommittee.map((member) => (
-            <CommitteeMemberCard key={member.name} member={member} />
-          ))}
+        <div className="container-wide">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+            {industryForumsCommittee.map((member) => (
+              <CommitteeMemberCard key={member.name} member={member} />
+            ))}
+          </div>
         </div>
       </Section>
     </>

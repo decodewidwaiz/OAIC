@@ -2,17 +2,18 @@
 
 /* ─── Tailwind v4 Design Tokens ──────────────────────────────────── */
 @theme {
-  /* Colors - Primary Rust Red palette */
-  --color-primary-50:  #fdf4f2;
-  --color-primary-100: #fae4df;
-  --color-primary-200: #f6ccc2;
-  --color-primary-300: #f0ab9a;
-  --color-primary-400: #e8816a;
-  --color-primary-500: #dd5b40;
-  --color-primary-600: #c94025;
-  --color-primary-700: #a8331c;
-  --color-primary-800: #8d2e1c;
-  --color-primary-900: #75291b;
+  /* Colors - Primary Blue palette */
+  --color-primary-50:  #eff8fd;
+  --color-primary-100: #dff2fa;
+  --color-primary-200: #bfe5f6;
+  --color-primary-300: #8fccee;
+  --color-primary-400: #5cb3e6;
+  --color-primary-500: #2999df;
+  --color-primary-600: #1a82c4;
+  --color-primary-700: #166ba2;
+  --color-primary-800: #136496; /* Base color requested by user */
+  --color-primary-900: #10527b;
+  --color-primary-950: #08283c; /* Subtle dark variant */
 
   /* Colors - Neutral Warm Gray palette */
   --color-gray-50:  #faf9f8;
@@ -26,9 +27,7 @@
   --color-gray-800: #4a453f;
   --color-gray-900: #2e2a27;
 
-  /* Colors - Accents */
-  --color-accent-cyan: #3b82f6; /* Changed to a standard blue for links/accents */
-  --color-accent-orange: #d97706; /* Golden amber */
+  /* Colors - Accents (Removed in favor of Primary theme) */
 
   /* Colors - Legacy (to be phased out) */
   --color-earth-100: var(--color-gray-100);
@@ -118,7 +117,7 @@
 @layer components {
   .container-wide {
     width: 100%;
-    max-width: 1280px;
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
     padding-left: 1.5rem;

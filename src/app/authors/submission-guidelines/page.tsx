@@ -9,6 +9,7 @@ import {
 import { FileDown, AlertTriangle } from 'lucide-react';
 import Section from '@/components/layout/Section';
 import { Button } from '@/components/ui/Button';
+import { Check } from 'lucide-react';
 import {
   Card,
   CardContent,
@@ -26,24 +27,31 @@ export const metadata: Metadata = {
 
 function GeneralGuidelines() {
   return (
-    <div className="prose">
-      <p>
-        All papers submitted to OAIC 2026 must be original, unpublished work not
-        currently under review at any other venue. Submissions must be in
-        English and comply with the IEEE double-column conference format.
-      </p>
-      <ul>
-        {[
-          'Papers must not exceed the specified page limits (excluding references).',
-          'All submissions will undergo a double-blind peer review process.',
-          'Authors must anonymize their submissions, removing names, affiliations, and acknowledgements.',
-          'Self-citations should be minimized and written in the third person to maintain anonymity.',
-          'Submitted papers must not be under review elsewhere simultaneously.',
-          'At least one author of an accepted paper must register for the conference and present the paper.',
-        ].map((item) => (
-          <li key={item}>{item}</li>
-        ))}
-      </ul>
+    <div className="space-y-6">
+      <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8">
+        <p className="text-lg text-gray-700 leading-relaxed mb-8">
+          All papers submitted to OAIC 2026 must be original, unpublished work not
+          currently under review at any other venue. Submissions must be in
+          English and comply with the IEEE double-column conference format.
+        </p>
+        <ul className="space-y-5">
+          {[
+            'Papers must not exceed the specified page limits (excluding references).',
+            'All submissions will undergo a double-blind peer review process.',
+            'Authors must anonymize their submissions, removing names, affiliations, and acknowledgements.',
+            'Self-citations should be minimized and written in the third person to maintain anonymity.',
+            'Submitted papers must not be under review elsewhere simultaneously.',
+            'At least one author of an accepted paper must register for the conference and present the paper.',
+          ].map((item) => (
+            <li key={item} className="flex items-start">
+              <div className="mr-4 mt-1">
+                <Check className="h-5 w-5 text-primary-400 stroke-[3]" />
+              </div>
+              <span className="text-gray-700 font-medium text-lg">{item}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 }
@@ -60,26 +68,20 @@ function FormattingGuidelines() {
           { label: 'File Format', value: 'PDF only' },
           { label: 'File Size Limit', value: '10 MB' },
         ].map((spec) => (
-          <Card key={spec.label}>
-            <CardContent className="p-4">
-              <p className="text-sm font-medium text-muted-foreground">
-                {spec.label}
-              </p>
-              <p className="font-semibold">{spec.value}</p>
-            </CardContent>
-          </Card>
+          <div key={spec.label} className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:border-primary-400 hover:shadow-md transition-all duration-300 flex flex-col justify-center">
+            <p className="text-sm font-bold text-primary-400 uppercase tracking-wider mb-1">
+              {spec.label}
+            </p>
+            <p className="font-bold text-primary-900 text-xl">{spec.value}</p>
+          </div>
         ))}
       </div>
-      <div className="flex flex-wrap gap-4">
-        <Button as="a">
-          <a href="#">
-            <FileDown className="mr-2 h-4 w-4" /> LaTeX Template
-          </a>
+      <div className="flex flex-wrap gap-6 pt-4">
+        <Button as="a" href="#" className="bg-primary-600 hover:bg-primary-500 text-white text-lg px-8 py-6 shadow-md transition-transform hover:-translate-y-1 rounded-md border-none font-bold">
+          <FileDown className="mr-3 h-5 w-5" /> LaTeX Template
         </Button>
-        <Button as="a" variant="secondary">
-          <a href="#">
-            <FileDown className="mr-2 h-4 w-4" /> Word Template
-          </a>
+        <Button as="a" href="#" variant="outline" className="text-primary-600 border-2 border-primary-600 hover:bg-primary-50 text-lg px-8 py-6 shadow-sm transition-transform hover:-translate-y-1 rounded-md font-bold">
+          <FileDown className="mr-3 h-5 w-5" /> Word Template
         </Button>
       </div>
     </div>
@@ -88,11 +90,11 @@ function FormattingGuidelines() {
 
 function EthicsPolicy() {
   return (
-    <div className="space-y-6">
-      <Alert>
-        <AlertTriangle className="h-4 w-4" />
-        <AlertTitle>Commitment to Integrity</AlertTitle>
-        <AlertDescription>
+    <div className="space-y-8">
+      <Alert className="bg-primary-50 border-none border-l-4 border-l-primary-600 rounded-r-lg shadow-sm text-primary-950 p-6">
+        <AlertTriangle className="h-6 w-6 text-primary-600" />
+        <AlertTitle className="font-bold text-xl text-primary-900 ml-2">Commitment to Integrity</AlertTitle>
+        <AlertDescription className="text-lg mt-2 ml-2 leading-relaxed">
           OAIC 2026 is committed to the highest standards of publication ethics
           and takes all forms of misconduct seriously, including plagiarism,
           data fabrication, and improper authorship.
@@ -117,14 +119,10 @@ function EthicsPolicy() {
             desc: 'Authors must preserve research data and provide access upon reasonable request by reviewers.',
           },
         ].map((item) => (
-          <Card key={item.title}>
-            <CardHeader>
-              <CardTitle className="text-lg">{item.title}</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-muted-foreground">{item.desc}</p>
-            </CardContent>
-          </Card>
+          <div key={item.title} className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow duration-300">
+            <h3 className="text-xl font-bold text-primary-900 mb-3">{item.title}</h3>
+            <p className="text-gray-600 font-medium leading-relaxed">{item.desc}</p>
+          </div>
         ))}
       </div>
     </div>
@@ -133,24 +131,31 @@ function EthicsPolicy() {
 
 function CameraReady() {
   return (
-    <div className="prose">
-      <p>
-        After acceptance, authors must prepare and submit the camera-ready
-        version by{' '}
-        <strong className="font-semibold">September 10, 2026</strong>.
-      </p>
-      <ul>
-        {[
-          'Address all reviewer comments in the final version.',
-          'Include author names and affiliations (no longer anonymized).',
-          'Add acknowledgements section if applicable.',
-          'Ensure PDF is IEEE Xplore compliant (use IEEE PDF eXpress).',
-          'Submit the signed IEEE Copyright Form.',
-          'Upload all materials via the submission system by the deadline.',
-        ].map((item) => (
-          <li key={item}>{item}</li>
-        ))}
-      </ul>
+    <div className="space-y-6">
+      <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8">
+        <p className="text-lg text-gray-700 leading-relaxed mb-8">
+          After acceptance, authors must prepare and submit the camera-ready
+          version by{' '}
+          <strong className="font-bold text-primary-900">September 10, 2026</strong>.
+        </p>
+        <ul className="space-y-5">
+          {[
+            'Address all reviewer comments in the final version.',
+            'Include author names and affiliations (no longer anonymized).',
+            'Add acknowledgements section if applicable.',
+            'Ensure PDF is IEEE Xplore compliant (use IEEE PDF eXpress).',
+            'Submit the signed IEEE Copyright Form.',
+            'Upload all materials via the submission system by the deadline.',
+          ].map((item) => (
+            <li key={item} className="flex items-start">
+              <div className="mr-4 mt-1">
+                <Check className="h-5 w-5 text-primary-400 stroke-[3]" />
+              </div>
+              <span className="text-gray-700 font-medium text-lg">{item}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 }
