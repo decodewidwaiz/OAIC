@@ -29,7 +29,7 @@ export default function AtAGlancePage() {
         ]}
       />
       <Section className="pb-24">
-        <div className="mb-8 flex flex-wrap justify-center gap-4">
+        <div className="mb-6 sm:mb-8 flex flex-wrap justify-center gap-2 sm:gap-4">
           {legendItems.map((item) => (
             <Badge key={item.label} className="text-sm">
               {item.label}

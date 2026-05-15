@@ -36,28 +36,28 @@ export default function PricingTable() {
       {pricingTiers.map((tier) => (
         <TabsContent key={tier.name} value={tier.name}>
           <Card glowOnHover={false}>
-            <CardHeader>
-              <CardTitle>{tier.name} Registration</CardTitle>
-              <CardDescription>Cutoff: {tier.cutoff}</CardDescription>
+            <CardHeader className="p-3 sm:p-6">
+              <CardTitle className="text-sm sm:text-base">{tier.name} Registration</CardTitle>
+              <CardDescription className="text-xs sm:text-sm">Cutoff: {tier.cutoff}</CardDescription>
             </CardHeader>
-            <CardContent>
+            <CardContent className="p-3 sm:p-6 pt-0">
               <Table>
                 <TableHeader>
                   <TableRow>
-                    <TableHead>Category</TableHead>
-                    <TableHead className="text-right">Fee</TableHead>
+                    <TableHead className="text-xs sm:text-sm">Category</TableHead>
+                    <TableHead className="text-right text-xs sm:text-sm">Fee</TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>
                   {tier.rows.map((row) => (
                     <TableRow key={row.category}>
-                      <TableCell className="font-medium">
+                      <TableCell className="font-medium text-xs sm:text-sm">
                         {row.category}
                       </TableCell>
-                      <TableCell className="text-right font-mono">
+                      <TableCell className="text-right font-mono text-xs sm:text-sm">
                         {row.currency === 'INR' ? '₹' : '$'}
                         {row.amount}
-                        <span className="ml-2 text-muted-foreground">
+                        <span className="ml-1 sm:ml-2 text-muted-foreground">
                           {row.currency}
                         </span>
                       </TableCell>

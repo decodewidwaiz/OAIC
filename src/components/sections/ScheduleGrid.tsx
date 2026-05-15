@@ -40,32 +40,32 @@ export default function ScheduleGrid() {
         const daySlots = schedule.filter((s) => s.day === day);
         return (
           <TabsContent key={day} value={`Day ${day}`}>
-            <div className="space-y-6 mx-2 sm:mx-6 md:mx-10 lg:mx-16">
+            <div className="space-y-4 sm:space-y-6 mx-2 sm:mx-6 md:mx-10 lg:mx-16">
               {daySlots.map((slot) => (
                 <Card key={`${slot.day}-${slot.time}-${slot.title}`} className="overflow-hidden p-0">
                   {/* Mobile: stacked. md+: side by side */}
                   <div className="flex flex-col sm:flex-row">
                     {/* Time strip */}
-                    <div className="flex items-center gap-2 p-4 sm:p-6 sm:w-48 sm:flex-shrink-0 sm:border-r border-b sm:border-b-0 sm:justify-center">
-                      <Clock className="h-5 w-5 shrink-0" />
-                      <span className="font-mono text-base sm:text-lg whitespace-nowrap">
+                    <div className="flex items-center gap-2 py-2 px-3 sm:p-6 sm:w-48 sm:flex-shrink-0 sm:border-r border-b sm:border-b-0 sm:justify-center">
+                      <Clock className="h-4 w-4 sm:h-5 sm:w-5 shrink-0 text-muted-foreground" />
+                      <span className="font-mono text-sm sm:text-lg whitespace-nowrap text-muted-foreground">
                         {slot.time}
                       </span>
                     </div>
                     {/* Content */}
-                    <div className="flex-1 p-4 sm:p-6">
-                      <Badge className="mb-2">{slot.type}</Badge>
-                      <h3 className="text-base sm:text-lg font-semibold">{slot.title}</h3>
+                    <div className="flex-1 p-3 sm:p-6">
+                      <Badge className="mb-1.5 sm:mb-2 text-xs sm:text-sm">{slot.type}</Badge>
+                      <h3 className="text-sm sm:text-lg font-semibold leading-snug">{slot.title}</h3>
                       {(slot.room || slot.speaker) && (
-                        <div className="mt-2 flex flex-wrap gap-x-4 gap-y-2 text-sm text-muted-foreground">
+                        <div className="mt-1.5 sm:mt-2 flex flex-wrap gap-x-3 gap-y-1 sm:gap-x-4 sm:gap-y-2 text-xs sm:text-sm text-muted-foreground">
                           {slot.room && (
-                            <span className="flex items-center gap-1.5">
-                              <MapPin className="h-4 w-4 shrink-0" /> {slot.room}
+                            <span className="flex items-center gap-1">
+                              <MapPin className="h-3 w-3 sm:h-4 sm:w-4 shrink-0" /> {slot.room}
                             </span>
                           )}
                           {slot.speaker && (
-                            <span className="flex items-center gap-1.5">
-                              <Mic className="h-4 w-4 shrink-0" /> {slot.speaker}
+                            <span className="flex items-center gap-1">
+                              <Mic className="h-3 w-3 sm:h-4 sm:w-4 shrink-0" /> {slot.speaker}
                             </span>
                           )}
                         </div>

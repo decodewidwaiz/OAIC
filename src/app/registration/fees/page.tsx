@@ -32,21 +32,21 @@ export default function RegistrationFeesPage() {
         ]}
       />
       <Section className="pb-24">
-        <div className="mx-auto max-w-5xl">
+        <div className="mx-auto max-w-5xl px-3 sm:px-4 md:px-0">
           <PricingTable />
 
-          <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2">
-            <div className="rounded-lg border bg-card p-6 text-card-foreground shadow-sm">
-              <h3 className="mb-4 text-lg font-semibold">
+          <div className="mt-6 sm:mt-12 grid grid-cols-1 gap-4 sm:gap-8 md:grid-cols-2">
+            <div className="rounded-lg border bg-card p-3 sm:p-6 text-card-foreground shadow-sm">
+              <h3 className="mb-3 sm:mb-4 text-lg font-semibold">
                 Registration Includes
               </h3>
-              <ul className="space-y-3">
+              <ul className="space-y-2 sm:space-y-3">
                 {registrationIncludes.map((item) => (
                   <li key={item} className="flex items-start">
-                    <div className="mr-3 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
-                      <Check className="h-4 w-4" />
+                    <div className="mr-2 sm:mr-3 flex h-5 w-5 sm:h-6 sm:w-6 flex-shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+                      <Check className="h-3 w-3 sm:h-4 sm:w-4" />
                     </div>
-                    <span className="text-muted-foreground">{item}</span>
+                    <span className="text-xs sm:text-sm text-muted-foreground">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -56,7 +56,7 @@ export default function RegistrationFeesPage() {
               <AlertTriangle className="h-4 w-4" />
               <AlertTitle>Important Notes</AlertTitle>
               <AlertDescription>
-                <ul className="mt-2 list-inside list-disc space-y-1">
+                <ul className="mt-2 list-inside list-disc space-y-1 text-xs sm:text-sm">
                   {notes.map((note) => (
                     <li key={note}>{note}</li>
                   ))}
