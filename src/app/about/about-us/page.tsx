@@ -27,16 +27,6 @@ export default function AboutUsPage() {
             {/* Left Side: Logo Integration Area */}
             <div className="lg:col-span-5 animate-fade-in-up" style={{ '--animation-delay': '0.1s' } as React.CSSProperties}>
               <div className="relative group flex items-center justify-center min-h-[400px] bg-gray-50/30">
-                {/* Faint Background Texture: World Map */}
-                <div className="absolute inset-0 z-0 opacity-[0.05] pointer-events-none">
-                  <Image
-                    src="/globe.svg"
-                    alt=""
-                    fill
-                    className="object-contain scale-110"
-                  />
-                </div>
-
                 {/* Architectural Frame */}
                 <div className="relative z-10 w-full h-full aspect-square flex items-center justify-center p-16">
                   {/* Minimal Architectural Corner Detail */}
@@ -126,4 +116,5 @@ export default function AboutUsPage() {
         </div>
       </div>
     </>
-  );}
+  );
+}

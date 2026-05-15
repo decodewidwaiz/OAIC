@@ -60,7 +60,7 @@ export default function VisaPage() {
           <div className="relative group mb-20 p-8 border border-gray-100 bg-gray-50/30 rounded-sm animate-fade-in-up">
             <div className="absolute top-0 left-0 w-12 h-[1.5px] bg-[#08283C]"></div>
             <div className="absolute top-0 left-0 w-[1.5px] h-12 bg-[#08283C]"></div>
-            
+
             <div className="flex items-start gap-4">
               <div className="p-2 bg-white rounded-full shadow-sm">
                 <AlertTriangle className="h-5 w-5 text-[#08283C]" />
@@ -75,7 +75,7 @@ export default function VisaPage() {
           </div>
 
           <div className="space-y-24">
-            
+
             {/* Visa Requirements Section */}
             <div className="animate-fade-in-up" style={{ '--animation-delay': '0.1s' } as React.CSSProperties}>
               <div className="relative mb-12">
@@ -130,7 +130,7 @@ export default function VisaPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8 relative">
                 {/* Vertical Decorative Line for Desktop */}
                 <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gray-100 hidden md:block"></div>
-                
+
                 {applicationSteps.map((step, i) => (
                   <div key={i} className="flex items-start gap-6 group">
                     <span className="flex-shrink-0 text-4xl font-serif font-bold text-gray-100 group-hover:text-[#3A8EC2]/20 transition-colors duration-300">
@@ -159,7 +159,7 @@ export default function VisaPage() {
                   Indian e-Visa Portal
                 </a>
                 <a
-                  href="mailto:info@oaic2024.in?subject=Invitation Letter Request"
+                  href="mailto:"
                   className="w-full sm:w-auto px-10 py-5 border border-gray-200 hover:border-[#0C527D] hover:bg-gray-50 text-[#08283C] text-xs font-bold uppercase tracking-[0.2em] transition-all duration-300 text-center"
                 >
                   Request Invitation Letter
@@ -171,4 +171,5 @@ export default function VisaPage() {
         </div>
       </Section>
     </>
-  );}
+  );
+}

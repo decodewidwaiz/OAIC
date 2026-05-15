@@ -24,7 +24,7 @@ const formatRequirements = [
 const submissionInstructions = [
   'Submit a 2–4 page extended abstract',
   'IEEE double-column format required',
-  'Submit via EasyChair portal',
+  'Submit via EDAS',
   'Include "Poster:" prefix in the title',
   'Accepted posters receive participation certificate',
   'Best Poster Award presented at closing ceremony',

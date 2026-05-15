@@ -1,6 +1,7 @@
 import { ReactNode, HTMLAttributes, LabelHTMLAttributes } from 'react';
+import { FormProvider } from 'react-hook-form';
 
-export const Form = ({ children }: { children: ReactNode }) => <form>{children}</form>;
+export const Form = FormProvider;
 
 
 export const FormItem = ({ children, ...props }: HTMLAttributes<HTMLDivElement>) => <div className="space-y-2" {...props}>{children}</div>;

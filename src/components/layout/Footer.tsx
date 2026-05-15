@@ -66,7 +66,7 @@ export default function Footer() {
                   <ArrowUpRight className="w-3 text-[#aad5f0] h-3 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
                 </Link>
                 <p className="text-[12px] text-gray-400 max-w-xs leading-relaxed italic opacity-80">
-                  International Conference on Optimization, Artificial Intelligence & Computing
+                  2026 1st Odisha AI Conference
                 </p>
               </div>
             </div>

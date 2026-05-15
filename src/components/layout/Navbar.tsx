@@ -54,58 +54,45 @@ export default function Navbar() {
           {/* Left: Quick Links - Horizontally scrollable on mobile */}
           <div className="flex items-center text-[10px] sm:text-[12px] md:text-[13px] font-medium tracking-tight sm:tracking-wide overflow-x-auto no-scrollbar whitespace-nowrap pr-4">
             <Link
-              href="https://www.ieee.org"
+              href="https://www.ieee.org" target="_blank"
               className="text-white/80 hover:text-white transition-colors duration-200 py-2 flex-shrink-0"
             >
               IEEE.org
             </Link>
             <span className="mx-2 sm:mx-3 w-px h-3 bg-[#0C527D] flex-shrink-0" aria-hidden="true" />
             <Link
-              href="https://www.comsoc.org"
-              className="text-white/80 hover:text-white transition-colors duration-200 py-2 flex-shrink-0"
-            >
-              IEEE ComSoc
-            </Link>
-            <span className="mx-2 sm:mx-3 w-px h-3 bg-[#0C527D] flex-shrink-0" aria-hidden="true" />
-            <Link
-              href="https://dl.ieee.org/Xplore/home.jsp"
+              href="https://ieeexplore.ieee.org/Xplore/home.jsp" target="_blank"
               className="text-white/80 hover:text-white transition-colors duration-200 py-2 flex-shrink-0"
             >
               IEEE Xplore
             </Link>
             <span className="mx-2 sm:mx-3 w-px h-3 bg-[#0C527D] hidden sm:block flex-shrink-0" aria-hidden="true" />
             <Link
-              href="#"
+              href="https://standards.ieee.org/" target="_blank"
               className="text-white/80 hover:text-white transition-colors duration-200 py-2 hidden sm:block flex-shrink-0"
             >
               IEEE Standards
             </Link>
             <span className="mx-2 sm:mx-3 w-px h-3 bg-[#0C527D] hidden md:block flex-shrink-0" aria-hidden="true" />
             <Link
-              href="#"
+              href="https://spectrum.ieee.org/" target="_blank"
               className="text-white/80 hover:text-white transition-colors duration-200 py-2 hidden md:block flex-shrink-0"
             >
               IEEE Spectrum
             </Link>
           </div>
 
-          {/* Right: Logos/More Sites */}
           <div className="flex items-center gap-x-3 sm:gap-x-5 flex-shrink-0">
-            <div className="hidden lg:flex items-center gap-x-2 text-[11px] font-medium text-white/60 uppercase tracking-widest mr-2">
-              <span>More Sites</span>
-              <ChevronDown className="w-3 h-3" />
-            </div>
-
             <div className="flex items-center gap-x-2 sm:gap-x-4">
               <Link
-                href="https://www.comsoc.org"
+                href="https://aicsoa.in/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="opacity-80 hover:opacity-100 transition-opacity duration-200"
               >
                 <Image
                   src="/images/sponsors/aiclogo.png"
-                  alt="IEEE ComSoc"
+                  alt="AIC-SOA"
                   className="h-4 sm:h-6 md:h-8 w-auto object-contain brightness-0 invert"
                   width={80}
                   height={16}
@@ -113,14 +100,14 @@ export default function Navbar() {
               </Link>
               <div className="w-px h-3 sm:h-4 bg-[#0C527D]" aria-hidden="true" />
               <Link
-                href="https://www.comsoc.org"
+                href="https://soa.ac.in"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="opacity-80 hover:opacity-100 transition-opacity duration-200"
               >
                 <Image
                   src="/images/sponsors/SOA.png"
-                  alt="IEEE ComSoc"
+                  alt="SOA"
                   className="h-4 sm:h-6 md:h-8 w-auto object-contain "
                   width={80}
                   height={16}
@@ -135,7 +122,7 @@ export default function Navbar() {
               >
                 <Image
                   src="/images/sponsors/future_networks.png"
-                  alt="IEEE ComSoc"
+                  alt="future networks"
                   className="h-4 sm:h-6 md:h-8 w-auto object-contain brightness-0 invert"
                   width={80}
                   height={16}
@@ -143,14 +130,14 @@ export default function Navbar() {
               </Link>
               <div className="w-px h-3 sm:h-4 bg-[#0C527D]" aria-hidden="true" />
               <Link
-                href="https://www.comsoc.org"
+                href="https://testbed.ieee.org/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="opacity-80 hover:opacity-100 transition-opacity duration-200"
               >
                 <Image
                   src="/images/sponsors/innovation_testbed.png"
-                  alt="IEEE ComSoc"
+                  alt="testbed"
                   className="h-8 w-auto object-contain brightness-0 invert"
                   width={80}
                   height={16}

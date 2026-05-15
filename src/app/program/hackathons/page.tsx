@@ -23,43 +23,43 @@ const timeline = [
   {
     icon: Lightbulb,
     label: 'Registration',
-    date: 'July 1, 2026',
+    date: 'TBA',
     desc: 'Team registration opens. Teams of 2–4.',
   },
   {
     icon: Code2,
     label: 'Ideation Phase',
-    date: 'October 14, 2026',
+    date: 'TBA',
     desc: 'Submit your project idea and team details.',
   },
   {
     icon: Zap,
     label: 'Hacking Begins',
-    date: 'October 15, 2026',
+    date: 'TBA',
     desc: '24-hour build sprint at the conference venue.',
   },
   {
     icon: Trophy,
     label: 'Demo Day & Awards',
-    date: 'October 17, 2026',
+    date: 'TBA',
     desc: 'Present to judges. Top 3 teams win prizes.',
   },
 ];
 
 const prizes = [
   {
-    rank: '🥇 1st Place',
-    amount: '₹1,00,000',
+    rank: '1st Place',
+    amount: '₹ TBA',
     desc: 'Cash prize + incubation support',
   },
   {
-    rank: '🥈 2nd Place',
-    amount: '₹50,000',
+    rank: '2nd Place',
+    amount: '₹ TBA',
     desc: 'Cash prize + mentorship',
   },
   {
-    rank: '🥉 3rd Place',
-    amount: '₹25,000',
+    rank: '3rd Place',
+    amount: '₹ TBA',
     desc: 'Cash prize + certificates',
   },
 ];
@@ -74,7 +74,6 @@ export default function HackathonsPage() {
       />
       <Section className="pb-24">
         <div className="text-center">
-          <Badge>Hackathon Theme 2026</Badge>
           <h1 className="mt-4 text-4xl font-bold tracking-tight text-primary-950 sm:text-6xl">
             AI for <span className="text-primary-600">Odisha</span>
           </h1>
@@ -93,50 +92,50 @@ export default function HackathonsPage() {
           className="mb-8"
         />
         <div className="mx-2 sm:mx-6 md:mx-10 lg:mx-16">
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {timeline.map((step) => (
-            <Card key={step.label} glowOnHover={false} className="bg-white border border-primary-100 border-l-4 border-l-primary-600 shadow-sm transition-shadow duration-200 hover:shadow-md">
-              <CardHeader>
-                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary-100">
-                  <step.icon className="h-6 w-6 text-primary-600" />
-                </div>
-                <CardTitle>{step.label}</CardTitle>
-                <CardDescription>{step.date}</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p>{step.desc}</p>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {timeline.map((step) => (
+              <Card key={step.label} glowOnHover={false} className="bg-white border border-primary-100 border-l-4 border-l-primary-600 shadow-sm transition-shadow duration-200 hover:shadow-md">
+                <CardHeader>
+                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary-100">
+                    <step.icon className="h-6 w-6 text-primary-600" />
+                  </div>
+                  <CardTitle>{step.label}</CardTitle>
+                  <CardDescription>{step.date}</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p>{step.desc}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
       </Section>
 
       <Section>
         <SectionHeader
           title="Prize Pool"
-          subtitle="Total prizes worth ₹1,75,000"
+          subtitle="Total prizes worth TBA"
           className="mb-8"
         />
         <div className="mx-2 sm:mx-6 md:mx-10 lg:mx-16">
-        <div className="mx-auto grid max-w-4xl grid-cols-1 gap-6 sm:grid-cols-3">
-          {prizes.map((prize) => (
-            <Card
-              key={prize.rank}
-              glowOnHover={false} className="text-center bg-white border border-primary-100 border-l-4 border-l-primary-950 shadow-sm transition-shadow duration-200 hover:shadow-md"
-            >
-              <CardHeader>
-                <CardTitle className="text-xl">{prize.rank}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="font-mono text-4xl font-bold text-primary-500">
-                  {prize.amount}
-                </p>
-                <p className="mt-2 text-gray-600">{prize.desc}</p>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+          <div className="mx-auto grid max-w-4xl grid-cols-1 gap-6 sm:grid-cols-3">
+            {prizes.map((prize) => (
+              <Card
+                key={prize.rank}
+                glowOnHover={false} className="text-center bg-white border border-primary-100 border-l-4 border-l-primary-950 shadow-sm transition-shadow duration-200 hover:shadow-md"
+              >
+                <CardHeader>
+                  <CardTitle className="text-xl">{prize.rank}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="font-mono text-4xl font-bold text-primary-500">
+                    {prize.amount}
+                  </p>
+                  <p className="mt-2 text-gray-600">{prize.desc}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
       </Section>
 
