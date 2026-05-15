@@ -50,113 +50,113 @@ export default function Navbar() {
 
       {/* Top Utility Bar */}
       <div className="bg-[#08283C] text-white border-b border-[#0C527D]/30 relative z-[60]">
-        <div className="container-wide flex justify-between items-center h-9">
-          {/* Left: Quick Links */}
-          <div className="flex items-center text-[11px] font-medium tracking-wide">
-            <Link 
-              href="https://www.ieee.org" 
-              className="text-white/80 hover:text-white transition-colors duration-200 py-2"
+        <div className="container-wide flex justify-between items-center h-10 sm:h-12 md:h-14">
+          {/* Left: Quick Links - Horizontally scrollable on mobile */}
+          <div className="flex items-center text-[10px] sm:text-[12px] md:text-[13px] font-medium tracking-tight sm:tracking-wide overflow-x-auto no-scrollbar whitespace-nowrap pr-4">
+            <Link
+              href="https://www.ieee.org"
+              className="text-white/80 hover:text-white transition-colors duration-200 py-2 flex-shrink-0"
             >
               IEEE.org
             </Link>
-            <span className="mx-3 w-px h-3 bg-[#0C527D]" aria-hidden="true" />
-            <Link 
-              href="https://www.comsoc.org" 
-              className="text-white/80 hover:text-white transition-colors duration-200 py-2"
+            <span className="mx-2 sm:mx-3 w-px h-3 bg-[#0C527D] flex-shrink-0" aria-hidden="true" />
+            <Link
+              href="https://www.comsoc.org"
+              className="text-white/80 hover:text-white transition-colors duration-200 py-2 flex-shrink-0"
             >
               IEEE ComSoc
             </Link>
-            <span className="mx-3 w-px h-3 bg-[#0C527D]" aria-hidden="true" />
-            <Link 
-              href="https://dl.ieee.org/Xplore/home.jsp" 
-              className="text-white/80 hover:text-white transition-colors duration-200 py-2"
+            <span className="mx-2 sm:mx-3 w-px h-3 bg-[#0C527D] flex-shrink-0" aria-hidden="true" />
+            <Link
+              href="https://dl.ieee.org/Xplore/home.jsp"
+              className="text-white/80 hover:text-white transition-colors duration-200 py-2 flex-shrink-0"
             >
               IEEE Xplore
             </Link>
-            <span className="mx-3 w-px h-3 bg-[#0C527D] hidden sm:block" aria-hidden="true" />
-            <Link 
-              href="#" 
-              className="text-white/80 hover:text-white transition-colors duration-200 py-2 hidden sm:block"
+            <span className="mx-2 sm:mx-3 w-px h-3 bg-[#0C527D] hidden sm:block flex-shrink-0" aria-hidden="true" />
+            <Link
+              href="#"
+              className="text-white/80 hover:text-white transition-colors duration-200 py-2 hidden sm:block flex-shrink-0"
             >
               IEEE Standards
             </Link>
-            <span className="mx-3 w-px h-3 bg-[#0C527D] hidden md:block" aria-hidden="true" />
-            <Link 
-              href="#" 
-              className="text-white/80 hover:text-white transition-colors duration-200 py-2 hidden md:block"
+            <span className="mx-2 sm:mx-3 w-px h-3 bg-[#0C527D] hidden md:block flex-shrink-0" aria-hidden="true" />
+            <Link
+              href="#"
+              className="text-white/80 hover:text-white transition-colors duration-200 py-2 hidden md:block flex-shrink-0"
             >
               IEEE Spectrum
             </Link>
           </div>
 
           {/* Right: Logos/More Sites */}
-          <div className="flex items-center gap-x-5">
+          <div className="flex items-center gap-x-3 sm:gap-x-5 flex-shrink-0">
             <div className="hidden lg:flex items-center gap-x-2 text-[11px] font-medium text-white/60 uppercase tracking-widest mr-2">
               <span>More Sites</span>
               <ChevronDown className="w-3 h-3" />
             </div>
-            
-            <div className="flex items-center gap-x-4">
-              <Link 
-                href="https://www.comsoc.org" 
-                target="_blank" 
+
+            <div className="flex items-center gap-x-2 sm:gap-x-4">
+              <Link
+                href="https://www.comsoc.org"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="opacity-80 hover:opacity-100 transition-opacity duration-200"
               >
-                <Image 
-                  src="/images/sponsors/aiclogo.png" 
-                  alt="IEEE ComSoc" 
-                  className="h-4 w-auto object-contain brightness-0 invert" 
-                  width={80} 
-                  height={16} 
+                <Image
+                  src="/images/sponsors/aiclogo.png"
+                  alt="IEEE ComSoc"
+                  className="h-4 sm:h-6 md:h-8 w-auto object-contain brightness-0 invert"
+                  width={80}
+                  height={16}
                 />
               </Link>
-              <div className="w-px h-4 bg-[#0C527D]" aria-hidden="true" />
-              <Link 
-                href="https://www.comsoc.org" 
-                target="_blank" 
+              <div className="w-px h-3 sm:h-4 bg-[#0C527D]" aria-hidden="true" />
+              <Link
+                href="https://www.comsoc.org"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="opacity-80 hover:opacity-100 transition-opacity duration-200"
               >
-                <Image 
-                  src="/images/sponsors/SOA.png" 
-                  alt="IEEE ComSoc" 
-                  className="h-4 w-auto object-contain " 
-                  width={80} 
-                  height={16} 
+                <Image
+                  src="/images/sponsors/SOA.png"
+                  alt="IEEE ComSoc"
+                  className="h-4 sm:h-6 md:h-8 w-auto object-contain "
+                  width={80}
+                  height={16}
                 />
               </Link>
-              <div className="w-px h-4 bg-[#0C527D]" aria-hidden="true" />
-              <Link 
-                href="https://www.comsoc.org" 
-                target="_blank" 
+              <div className="w-px h-3 sm:h-4 bg-[#0C527D]" aria-hidden="true" />
+              <Link
+                href="https://www.comsoc.org"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="opacity-80 hover:opacity-100 transition-opacity duration-200"
               >
-                <Image 
-                  src="/images/sponsors/future_networks.png" 
-                  alt="IEEE ComSoc" 
-                  className="h-4 w-auto object-contain brightness-0 invert" 
-                  width={80} 
-                  height={16} 
+                <Image
+                  src="/images/sponsors/future_networks.png"
+                  alt="IEEE ComSoc"
+                  className="h-4 sm:h-6 md:h-8 w-auto object-contain brightness-0 invert"
+                  width={80}
+                  height={16}
                 />
               </Link>
-              <div className="w-px h-4 bg-[#0C527D]" aria-hidden="true" />
-              <Link 
-                href="https://www.comsoc.org" 
-                target="_blank" 
+              <div className="w-px h-3 sm:h-4 bg-[#0C527D]" aria-hidden="true" />
+              <Link
+                href="https://www.comsoc.org"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="opacity-80 hover:opacity-100 transition-opacity duration-200"
               >
-                <Image 
-                  src="/images/sponsors/innovation_testbed.png" 
-                  alt="IEEE ComSoc" 
-                  className="h-4 w-auto object-contain brightness-0 invert" 
-                  width={80} 
-                  height={16} 
+                <Image
+                  src="/images/sponsors/innovation_testbed.png"
+                  alt="IEEE ComSoc"
+                  className="h-8 w-auto object-contain brightness-0 invert"
+                  width={80}
+                  height={16}
                 />
               </Link>
-              
+
             </div>
           </div>
         </div>
@@ -165,7 +165,7 @@ export default function Navbar() {
       <header
         className={cn(
           'sticky top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-primary-950',
-          scrolled ? 'bg-primary-950 shadow-lg' : 'bg-primary-900'
+          scrolled ? 'bg-primary-950 shadow-lg' : 'bg-primary-50'
         )}
         role="banner"
       >
@@ -174,13 +174,13 @@ export default function Navbar() {
             {/* Search Input on the Left (to match some parts of the image style, or right?)
                 Actually, putting Logo on left is standard. Let's keep Logo on left. */}
             <Link href="/" className="flex items-center gap-3 pr-6" aria-label="OAIC 2026 - Home">
-              <Image 
-                src="/images/logo.png" 
-                alt="OAIC 2026 Logo" 
-                className="h-10 w-auto brightness-0 invert object-contain" 
-                width={160} 
-                height={40} 
-                priority 
+              <Image
+                src="/images/logo.png"
+                alt="OAIC 2026 Logo"
+                className="h-10 w-auto object-contain"
+                width={160}
+                height={40}
+                priority
               />
             </Link>
 
@@ -197,13 +197,18 @@ export default function Navbar() {
                     <Link
                       href={item.href || '#'}
                       className={cn(
-                        'flex items-center gap-1.5 px-4 h-full text-sm font-semibold transition-all duration-300 relative',
-                        isActive(item) ? 'text-white bg-primary-800/50' : 'text-gray-200 hover:text-white hover:bg-primary-800/50'
+                        'flex items-center gap-1.5 px-4 h-full text-sm font-semibold transition-all duration-300 relative', scrolled
+                        ? isActive(item)
+                          ? 'text-white bg-primary-800/50'
+                          : 'text-gray-200 hover:text-white hover:bg-primary-800/50'
+                        : isActive(item)
+                          ? 'text-[#154066]'
+                          : 'text-[#154066] hover:text-[#3271a8]'
                       )}
                     >
                       {item.label}
                       {item.children && <ChevronDown className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" />}
-                      
+
                       {/* Animated bottom border */}
                       <span className="absolute bottom-0 left-0 w-full h-1 bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
                     </Link>

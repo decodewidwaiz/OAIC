@@ -88,16 +88,44 @@ export default function HeroSection() {
             <span className="md:hidden">, </span>
             19 - 20 December 2026
           </p>
-          <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 pt-4 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-            <Button as={Link} href="/authors/submission-guidelines" className="bg-primary-800 hover:bg-primary-600 text-white border-none rounded-none py-3 px-6 shadow-sm w-full sm:w-auto text-center">
-              Submit a Paper
-            </Button>
-            <Button as={Link} href="/authors/call-for-papers" className="bg-white text-primary-900 hover:bg-gray-100 border-none rounded-none py-3 px-6 shadow-sm w-full sm:w-auto text-center">
-              Call for Papers
-            </Button>
-            <Button as={Link} href="/patrons-exhibitors" className="bg-white text-primary-900 hover:bg-gray-100 border-none rounded-none py-3 px-6 shadow-sm w-full sm:w-auto text-center">
-              Become a Patron/Exhibitor
-            </Button>
+          <div className="flex flex-col sm:flex-row items-center gap-5 sm:gap-6 pt-8 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+            {/* Primary CTA: Submit a Paper - Compact Premium Style */}
+            <div className="relative group">
+              {/* Thin Architectural Frame */}
+              <div className="absolute -bottom-1.5 -right-1.5 w-full h-full border-2 border-[#E58A3E]/70 z-0 transition-transform duration-500 group-hover:translate-x-0.5 group-hover:translate-y-0.5"></div>
+              
+              <Button 
+                as={Link} 
+                href="/authors/submission-guidelines" 
+                className="relative z-10 bg-[#0C527D] hover:bg-[#08283C] text-white border-none rounded-none py-3 px-8 text-[13px] font-bold uppercase tracking-[0.15em] transition-all duration-300 shadow-lg w-full sm:w-auto text-center block"
+              >
+                Submit a Paper
+              </Button>
+            </div>
+
+            {/* Secondary CTA: Call for Papers - Sleek Editorial */}
+            <div className="relative group">
+              <div className="absolute -bottom-1 -right-1 w-full h-full border-2 border-[#b5d1eb]/70 z-0 transition-transform duration-500 group-hover:translate-x-0.5 group-hover:translate-y-0.5"></div>
+              <Button 
+                as={Link} 
+                href="/authors/call-for-papers" 
+                className="relative z-10 bg-white text-[#08283C] hover:bg-gray-50 border border-gray-100 rounded-none py-3 px-8 text-[13px] font-bold uppercase tracking-[0.15em] transition-all duration-300 shadow-sm w-full sm:w-auto text-center block"
+              >
+                Call for Papers
+              </Button>
+            </div>
+
+            {/* Secondary CTA: Become a Patron - Sleek Editorial */}
+            <div className="relative group">
+              <div className="absolute -bottom-1 -right-1 w-full h-full border border-[#d5e6f5]/70 z-0 transition-transform duration-500 group-hover:translate-x-0.5 group-hover:translate-y-0.5"></div>
+              <Button 
+                as={Link} 
+                href="/patrons-exhibitors" 
+                className="relative z-10 bg-white text-[#08283C] hover:bg-gray-50 border border-gray-100 rounded-none py-3 px-8 text-[13px] font-bold uppercase tracking-[0.15em] transition-all duration-300 shadow-sm w-full sm:w-auto text-center block"
+              >
+                Become a Patron
+              </Button>
+            </div>
           </div>
         </div>
       </div>
