@@ -8,13 +8,6 @@ import {
 } from 'lucide-react';
 import Section from '@/components/layout/Section';
 import SectionHeader from '@/components/layout/SectionHeader';
-import {
-  Card,
-  CardContent,
-
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/Card';
 import { Button } from '@/components/ui/Button';
 
 export const metadata: Metadata = {

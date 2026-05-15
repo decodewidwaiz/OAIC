@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/Button';
@@ -50,10 +51,12 @@ export default function HeroSection() {
             {dummyImages.map((src, index) => (
               <SplideSlide key={index} className="w-full h-full">
                 <div className="w-full h-full relative">
-                  <img 
+                  <Image 
                     src={src} 
                     alt={`Hero Background ${index + 1}`} 
-                    className="w-full h-full object-cover"
+                    fill
+                    className="object-cover"
+                    priority={index === 0}
                   />
                   {/* Overlay to make text readable */}
                   <div className="absolute inset-0 bg-primary-900/30" />

@@ -1,0 +1,62 @@
+﻿
+> oaic-2026@0.1.0 lint
+> eslint
+
+
+C:\Users\ishul\Desktop\reeee\OAIC\src\app\about\about-us\page.tsx
+  28:105  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  62:114  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\ishul\Desktop\reeee\OAIC\src\app\about\contact\page.tsx
+   53:116  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  118:114  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\ishul\Desktop\reeee\OAIC\src\app\authors\call-for-papers\page.tsx
+   4:10  warning  'Badge' is defined but never used        @typescript-eslint/no-unused-vars
+   8:3   warning  'Card' is defined but never used         @typescript-eslint/no-unused-vars
+   9:3   warning  'CardContent' is defined but never used  @typescript-eslint/no-unused-vars
+  11:3   warning  'CardHeader' is defined but never used   @typescript-eslint/no-unused-vars
+  12:3   warning  'CardTitle' is defined but never used    @typescript-eslint/no-unused-vars
+
+C:\Users\ishul\Desktop\reeee\OAIC\src\app\authors\call-for-posters\page.tsx
+   6:3  warning  'Card' is defined but never used         @typescript-eslint/no-unused-vars
+   7:3  warning  'CardContent' is defined but never used  @typescript-eslint/no-unused-vars
+   9:3  warning  'CardHeader' is defined but never used   @typescript-eslint/no-unused-vars
+  10:3  warning  'CardTitle' is defined but never used    @typescript-eslint/no-unused-vars
+
+C:\Users\ishul\Desktop\reeee\OAIC\src\app\authors\call-for-workshop-proposals\page.tsx
+  12:3  warning  'Card' is defined but never used         @typescript-eslint/no-unused-vars
+  13:3  warning  'CardContent' is defined but never used  @typescript-eslint/no-unused-vars
+  15:3  warning  'CardHeader' is defined but never used   @typescript-eslint/no-unused-vars
+  16:3  warning  'CardTitle' is defined but never used    @typescript-eslint/no-unused-vars
+
+C:\Users\ishul\Desktop\reeee\OAIC\src\app\authors\important-dates\page.tsx
+   8:3  warning  'Card' is defined but never used             @typescript-eslint/no-unused-vars
+   9:3  warning  'CardContent' is defined but never used      @typescript-eslint/no-unused-vars
+  10:3  warning  'CardDescription' is defined but never used  @typescript-eslint/no-unused-vars
+  11:3  warning  'CardHeader' is defined but never used       @typescript-eslint/no-unused-vars
+  12:3  warning  'CardTitle' is defined but never used        @typescript-eslint/no-unused-vars
+
+C:\Users\ishul\Desktop\reeee\OAIC\src\app\authors\submission-guidelines\page.tsx
+  14:3  warning  'Card' is defined but never used         @typescript-eslint/no-unused-vars
+  15:3  warning  'CardContent' is defined but never used  @typescript-eslint/no-unused-vars
+  17:3  warning  'CardHeader' is defined but never used   @typescript-eslint/no-unused-vars
+  18:3  warning  'CardTitle' is defined but never used    @typescript-eslint/no-unused-vars
+
+C:\Users\ishul\Desktop\reeee\OAIC\src\app\travel\attractions\page.tsx
+  62:142  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  62:154  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+
+C:\Users\ishul\Desktop\reeee\OAIC\src\app\travel\visa\page.tsx
+   80:91   error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  116:91   error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  150:122  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\ishul\Desktop\reeee\OAIC\src\components\sections\CommitteeMemberCard.tsx
+  21:15  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+C:\Users\ishul\Desktop\reeee\OAIC\src\components\sections\HeroSection.tsx
+  53:19  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+Γ£û 33 problems (9 errors, 24 warnings)
+

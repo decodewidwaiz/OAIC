@@ -59,7 +59,7 @@ export default function AttractionsPage() {
               </h2>
               <div className="w-16 h-1 bg-[#0C527D] mb-6"></div>
               <p className="text-base md:text-lg text-gray-500 leading-relaxed max-w-2xl">
-                World-class heritage sites and natural wonders, all within reach of Bhubaneswar. Experience the architectural marvels of the "Temple City" and beyond.
+                World-class heritage sites and natural wonders, all within reach of Bhubaneswar. Experience the architectural marvels of the &quot;Temple City&quot; and beyond.
               </p>
             </div>
 

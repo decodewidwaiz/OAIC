@@ -10,13 +10,6 @@ import { FileDown, AlertTriangle } from 'lucide-react';
 import Section from '@/components/layout/Section';
 import { Button } from '@/components/ui/Button';
 import { Check } from 'lucide-react';
-import {
-  Card,
-  CardContent,
-
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/Card';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/Alert';
 
 export const metadata: Metadata = {

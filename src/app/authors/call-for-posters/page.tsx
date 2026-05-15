@@ -2,13 +2,6 @@ import type { Metadata } from 'next';
 import PageHeader from '@/components/layout/PageHeader';
 import Section from '@/components/layout/Section';
 import SectionHeader from '@/components/layout/SectionHeader';
-import {
-  Card,
-  CardContent,
-
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/Card';
 import { Button } from '@/components/ui/Button';
 import { Check, Calendar } from 'lucide-react';
 import { Alert, AlertTitle, AlertDescription } from '@/components/ui/Alert';

@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import type { CommitteeMember } from '@/types';
 import { User, Building2 } from 'lucide-react';
 
@@ -16,9 +17,9 @@ export default function CommitteeMemberCard({
       <div className="p-6 flex flex-col items-center flex-1">
         {/* Avatar Area */}
         <div className="relative mb-5">
-          <div className="h-24 w-24 rounded-full overflow-hidden bg-primary-50 ring-4 ring-white shadow-md flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+          <div className="h-24 w-24 rounded-full overflow-hidden bg-primary-50 ring-4 ring-white shadow-md flex items-center justify-center group-hover:scale-110 transition-transform duration-300 relative">
             {member.image ? (
-              <img src={member.image} alt={member.name} className="h-full w-full object-cover" />
+              <Image src={member.image} alt={member.name} fill className="object-cover" />
             ) : (
               <User className="h-10 w-10 text-primary-300" />
             )}

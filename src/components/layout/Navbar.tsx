@@ -48,23 +48,116 @@ export default function Navbar() {
     <>
       <a href="#main-content" className="skip-link">Skip to main content</a>
 
-      {/* Top Bar */}
-      <div className="bg-primary-800 text-white text-xs py-1">
-        <div className="container-wide flex justify-between items-center">
-          <div className="flex items-center gap-x-6">
-            <Link href="https://www.ieee.org" className="text-white hover:underline">IEEE.org</Link>
-            <Link href="https://www.comsoc.org" className="text-white hover:underline">IEEE ComSoc</Link>
-            <Link href="https://dl.ieee.org/Xplore/home.jsp" className="text-white hover:underline">IEEE Xplore</Link>
+      {/* Top Utility Bar */}
+      <div className="bg-[#08283C] text-white border-b border-[#0C527D]/30 relative z-[60]">
+        <div className="container-wide flex justify-between items-center h-9">
+          {/* Left: Quick Links */}
+          <div className="flex items-center text-[11px] font-medium tracking-wide">
+            <Link 
+              href="https://www.ieee.org" 
+              className="text-white/80 hover:text-white transition-colors duration-200 py-2"
+            >
+              IEEE.org
+            </Link>
+            <span className="mx-3 w-px h-3 bg-[#0C527D]" aria-hidden="true" />
+            <Link 
+              href="https://www.comsoc.org" 
+              className="text-white/80 hover:text-white transition-colors duration-200 py-2"
+            >
+              IEEE ComSoc
+            </Link>
+            <span className="mx-3 w-px h-3 bg-[#0C527D]" aria-hidden="true" />
+            <Link 
+              href="https://dl.ieee.org/Xplore/home.jsp" 
+              className="text-white/80 hover:text-white transition-colors duration-200 py-2"
+            >
+              IEEE Xplore
+            </Link>
+            <span className="mx-3 w-px h-3 bg-[#0C527D] hidden sm:block" aria-hidden="true" />
+            <Link 
+              href="#" 
+              className="text-white/80 hover:text-white transition-colors duration-200 py-2 hidden sm:block"
+            >
+              IEEE Standards
+            </Link>
+            <span className="mx-3 w-px h-3 bg-[#0C527D] hidden md:block" aria-hidden="true" />
+            <Link 
+              href="#" 
+              className="text-white/80 hover:text-white transition-colors duration-200 py-2 hidden md:block"
+            >
+              IEEE Spectrum
+            </Link>
           </div>
-          <div className="flex items-center gap-x-4">
-            <span>More Sites</span>
-            <div className="h-4 w-px bg-primary-700" />
-            <Link href="https://www.comsoc.org" target="_blank" rel="noopener noreferrer">
-              <Image src="/comsoc-logo.png" alt="IEEE ComSoc" className="h-6" width={100} height={24} />
-            </Link>
-            <Link href="https://www.ieee.org" target="_blank" rel="noopener noreferrer">
-              <Image src="/ieee-logo.png" alt="IEEE" className="h-6" width={80} height={24} />
-            </Link>
+
+          {/* Right: Logos/More Sites */}
+          <div className="flex items-center gap-x-5">
+            <div className="hidden lg:flex items-center gap-x-2 text-[11px] font-medium text-white/60 uppercase tracking-widest mr-2">
+              <span>More Sites</span>
+              <ChevronDown className="w-3 h-3" />
+            </div>
+            
+            <div className="flex items-center gap-x-4">
+              <Link 
+                href="https://www.comsoc.org" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="opacity-80 hover:opacity-100 transition-opacity duration-200"
+              >
+                <Image 
+                  src="/images/sponsors/aiclogo.png" 
+                  alt="IEEE ComSoc" 
+                  className="h-4 w-auto object-contain brightness-0 invert" 
+                  width={80} 
+                  height={16} 
+                />
+              </Link>
+              <div className="w-px h-4 bg-[#0C527D]" aria-hidden="true" />
+              <Link 
+                href="https://www.comsoc.org" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="opacity-80 hover:opacity-100 transition-opacity duration-200"
+              >
+                <Image 
+                  src="/images/sponsors/SOA.png" 
+                  alt="IEEE ComSoc" 
+                  className="h-4 w-auto object-contain " 
+                  width={80} 
+                  height={16} 
+                />
+              </Link>
+              <div className="w-px h-4 bg-[#0C527D]" aria-hidden="true" />
+              <Link 
+                href="https://www.comsoc.org" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="opacity-80 hover:opacity-100 transition-opacity duration-200"
+              >
+                <Image 
+                  src="/images/sponsors/future_networks.png" 
+                  alt="IEEE ComSoc" 
+                  className="h-4 w-auto object-contain brightness-0 invert" 
+                  width={80} 
+                  height={16} 
+                />
+              </Link>
+              <div className="w-px h-4 bg-[#0C527D]" aria-hidden="true" />
+              <Link 
+                href="https://www.comsoc.org" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="opacity-80 hover:opacity-100 transition-opacity duration-200"
+              >
+                <Image 
+                  src="/images/sponsors/innovation_testbed.png" 
+                  alt="IEEE ComSoc" 
+                  className="h-4 w-auto object-contain brightness-0 invert" 
+                  width={80} 
+                  height={16} 
+                />
+              </Link>
+              
+            </div>
           </div>
         </div>
       </div>

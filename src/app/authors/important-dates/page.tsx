@@ -4,13 +4,6 @@ import { importantDates } from '@/data/dates';
 import { Badge } from '@/components/ui/Badge';
 import { Calendar, AlertTriangle } from 'lucide-react';
 import Section from '@/components/layout/Section';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/Card';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/Alert';
 
 export const metadata: Metadata = {

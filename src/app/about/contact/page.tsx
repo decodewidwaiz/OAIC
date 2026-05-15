@@ -50,7 +50,7 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 gap-16 lg:grid-cols-12 lg:gap-24 items-start">
             
             {/* Left Column: Inquiry Channels & Venue */}
-            <div className="lg:col-span-7 space-y-16 animate-fade-in-up" style={{ '--animation-delay': '0.1s' } as any}>
+            <div className="lg:col-span-7 space-y-16 animate-fade-in-up" style={{ '--animation-delay': '0.1s' } as React.CSSProperties}>
               <div>
                 <h2 className="text-4xl md:text-5xl font-serif font-semibold text-[#002147] tracking-tight leading-tight mb-8 flex items-center gap-4">
                   <span className="w-1.5 h-10 bg-[#002147]"></span>
@@ -115,7 +115,7 @@ export default function ContactPage() {
             </div>
 
             {/* Right Column: Message Panel */}
-            <div className="lg:col-span-5 animate-fade-in-up relative" style={{ '--animation-delay': '0.2s' } as any}>
+            <div className="lg:col-span-5 animate-fade-in-up relative" style={{ '--animation-delay': '0.2s' } as React.CSSProperties}>
               {/* Reference-style Architectural Accent */}
               <div className="absolute -bottom-10 -left-10 w-48 h-32 border-l border-b border-[#002147]/20 pointer-events-none hidden xl:block"></div>
               

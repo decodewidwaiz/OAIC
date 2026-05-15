@@ -77,7 +77,7 @@ export default function VisaPage() {
           <div className="space-y-24">
             
             {/* Visa Requirements Section */}
-            <div className="animate-fade-in-up" style={{ '--animation-delay': '0.1s' } as any}>
+            <div className="animate-fade-in-up" style={{ '--animation-delay': '0.1s' } as React.CSSProperties}>
               <div className="relative mb-12">
                 <h2 className="text-3xl md:text-4xl font-serif font-semibold text-[#08283C] tracking-tight mb-4">Visa Requirements</h2>
                 <div className="w-16 h-1 bg-[#0C527D]/20"></div>
@@ -113,7 +113,7 @@ export default function VisaPage() {
             </div>
 
             {/* Application Guide Section */}
-            <div className="animate-fade-in-up" style={{ '--animation-delay': '0.2s' } as any}>
+            <div className="animate-fade-in-up" style={{ '--animation-delay': '0.2s' } as React.CSSProperties}>
               <div className="relative mb-16 flex flex-col md:flex-row md:items-end justify-between gap-6">
                 <div className="max-w-2xl">
                   <h2 className="text-3xl md:text-4xl font-serif font-semibold text-[#08283C] tracking-tight mb-4">Application Guide</h2>
@@ -147,7 +147,7 @@ export default function VisaPage() {
             </div>
 
             {/* CTAs */}
-            <div className="pt-16 border-t border-gray-100 animate-fade-in-up" style={{ '--animation-delay': '0.3s' } as any}>
+            <div className="pt-16 border-t border-gray-100 animate-fade-in-up" style={{ '--animation-delay': '0.3s' } as React.CSSProperties}>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
                 <a
                   href="https://indianvisaonline.gov.in"

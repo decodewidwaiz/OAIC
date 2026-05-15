@@ -1,16 +1,8 @@
 import type { Metadata } from 'next';
 import PageHeader from '@/components/layout/PageHeader';
 import { topics, submissionTypes } from '@/data/callForPapers';
-import { Badge } from '@/components/ui/Badge';
 import Section from '@/components/layout/Section';
 import SectionHeader from '@/components/layout/SectionHeader';
-import {
-  Card,
-  CardContent,
-
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/Card';
 import { Button } from '@/components/ui/Button';
 import { FileText, Check } from 'lucide-react';
 

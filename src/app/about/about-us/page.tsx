@@ -25,7 +25,7 @@ export default function AboutUsPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 xl:gap-24 items-start">
 
             {/* Left Side: Logo Integration Area */}
-            <div className="lg:col-span-5 animate-fade-in-up" style={{ '--animation-delay': '0.1s' } as any}>
+            <div className="lg:col-span-5 animate-fade-in-up" style={{ '--animation-delay': '0.1s' } as React.CSSProperties}>
               <div className="relative group flex items-center justify-center min-h-[400px] bg-gray-50/30">
                 {/* Faint Background Texture: World Map */}
                 <div className="absolute inset-0 z-0 opacity-[0.05] pointer-events-none">
@@ -59,7 +59,7 @@ export default function AboutUsPage() {
             </div>
 
             {/* Right Side: Editorial Content */}
-            <div className="lg:col-span-7 animate-fade-in-up relative" style={{ '--animation-delay': '0.2s' } as any}>
+            <div className="lg:col-span-7 animate-fade-in-up relative" style={{ '--animation-delay': '0.2s' } as React.CSSProperties}>
               <div className="max-w-3xl relative">
                 {/* Exact IEEE Architectural Accent Bar */}
                 <div className="absolute -bottom-12 -left-12 w-[65%] h-32 pointer-events-none hidden md:block">
