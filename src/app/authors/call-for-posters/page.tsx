@@ -52,22 +52,17 @@ export default function CallForPostersPage() {
       />
       <Section className="pb-24">
         <div className="mx-auto max-w-6xl">
-          <Card className="mb-12 bg-primary-foreground/50">
-            <CardHeader>
-              <CardTitle className="text-2xl">
-                About Poster Presentations
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-lg text-muted-foreground">
-                Poster presentations at OAIC 2026 offer an excellent
-                opportunity to present your early-stage or work-in-progress
-                research to a diverse audience of AI researchers and
-                practitioners. The interactive format encourages direct
-                discussion and valuable feedback.
-              </p>
-            </CardContent>
-          </Card>
+          {/* Intro Box */}
+          <div className="mb-14 bg-primary-50 border-none border-l-4 border-l-primary-600 rounded-r-xl p-8 shadow-sm">
+            <h3 className="text-2xl font-bold text-primary-900 mb-4">About Poster Presentations</h3>
+            <p className="text-lg md:text-xl text-primary-950 leading-relaxed font-medium">
+              Poster presentations at OAIC 2026 offer an excellent
+              opportunity to present your early-stage or work-in-progress
+              research to a diverse audience of AI researchers and
+              practitioners. The interactive format encourages direct
+              discussion and valuable feedback.
+            </p>
+          </div>
 
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
             <div>
@@ -76,57 +71,53 @@ export default function CallForPostersPage() {
                 subtitle="Requirements"
                 className="mb-6"
               />
-              <Card>
-                <CardContent className="p-6">
-                  <ul className="space-y-4">
-                    {formatRequirements.map((item) => (
-                      <li key={item} className="flex items-start">
-                        <div className="mr-3 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
-                          <Check className="h-4 w-4" />
-                        </div>
-                        <span className="text-muted-foreground">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
+              <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8 hover:shadow-lg transition-all duration-300">
+                <ul className="space-y-5">
+                  {formatRequirements.map((item) => (
+                    <li key={item} className="flex items-start">
+                      <div className="mr-4 mt-0.5">
+                        <Check className="h-5 w-5 text-primary-400 stroke-[3]" />
+                      </div>
+                      <span className="text-gray-700 font-medium text-lg">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
 
             <div>
               <SectionHeader
                 title="Submission"
                 subtitle="Instructions"
-                className="mb-6"
+                className="mb-8"
               />
-              <Card>
-                <CardContent className="p-6">
-                  <ul className="space-y-4">
-                    {submissionInstructions.map((item) => (
-                      <li key={item} className="flex items-start">
-                        <div className="mr-3 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
-                          <Check className="h-4 w-4" />
-                        </div>
-                        <span className="text-muted-foreground">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
+              <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8 hover:shadow-lg transition-all duration-300">
+                <ul className="space-y-5">
+                  {submissionInstructions.map((item) => (
+                    <li key={item} className="flex items-start">
+                      <div className="mr-4 mt-0.5">
+                        <Check className="h-5 w-5 text-primary-400 stroke-[3]" />
+                      </div>
+                      <span className="text-gray-700 font-medium text-lg">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
 
-          <Alert className="mt-12">
-            <Calendar className="h-4 w-4" />
-            <AlertTitle>Key Date</AlertTitle>
-            <AlertDescription>
+          <Alert className="mt-14 bg-primary-50 border-none border-l-4 border-l-primary-600 rounded-r-lg shadow-sm text-primary-950 p-6">
+            <Calendar className="h-6 w-6 text-primary-600" />
+            <AlertTitle className="font-bold text-xl text-primary-900 ml-2">Key Date</AlertTitle>
+            <AlertDescription className="text-lg mt-2 ml-2">
               Poster Submission Deadline:{' '}
-              <strong className="font-semibold">August 1, 2026</strong>
+              <strong className="font-bold text-primary-900">August 1, 2026</strong>
             </AlertDescription>
           </Alert>
 
           <div className="mt-12 text-center">
-            <Button as="a" size="lg">
-              <a href="#">Submit Poster Abstract</a>
+            <Button as="a" href="#" className="bg-primary-600 hover:bg-primary-500 text-white text-lg px-8 py-6 shadow-md transition-transform hover:-translate-y-1 rounded-md border-none font-bold">
+              Submit Poster Abstract
             </Button>
           </div>
         </div>

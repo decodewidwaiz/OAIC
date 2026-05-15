@@ -35,65 +35,64 @@ export default function Footer() {
   const currentYear = 2026;
 
   return (
-    <footer role="contentinfo">
-      {/* Main Footer */}
-      <div className="bg-primary-800 text-white section-padding">
+    <footer role="contentinfo" className="flex flex-col">
+      {/* Tier 1: Main Navigation (Dark Blue) */}
+      <div className="bg-primary-900 text-white py-12">
         <div className="container-wide">
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
-            <div className="col-span-2 lg:col-span-2">
-              <Link href="/" className="mb-4 inline-block">
-                <Image src="/images/images/logo.png" alt="OAIC 2026 Logo" className="h-14" width={168} height={56} priority />
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 lg:gap-12">
+            {/* Logo and CTA */}
+            <div className="col-span-1 lg:col-span-2">
+              <Link href="/" className="mb-6 inline-block">
+                <Image 
+                  src="/images/logo.png" 
+                  alt="OAIC 2026 Logo" 
+                  className="h-14 w-auto brightness-0 invert object-contain" 
+                  width={168} 
+                  height={56} 
+                  priority 
+                />
               </Link>
-              <Link href="/authors/submission-guidelines" className="text-accent-cyan hover:underline font-semibold flex items-center gap-2">
+              <br />
+              <Link href="/authors/submission-guidelines" className="text-primary-400 hover:text-white hover:underline text-lg font-semibold flex items-center gap-2">
                 Submit a Paper →
               </Link>
             </div>
 
-            {Object.entries(footerNav).map(([key, links]) => (
-              <div key={key}>
-                <h3 className="font-bold text-lg mb-4 capitalize">{key}</h3>
-                <ul className="space-y-2">
-                  {links.map(link => (
-                    <li key={link.label}>
-                      <Link href={link.href} className="text-gray-300 hover:text-white transition-colors">
-                        {link.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+            {/* Nav Columns */}
+            <div className="flex flex-col space-y-4">
+              <Link href="/program/workshops" className="font-bold text-white text-lg hover:text-primary-300 transition-colors">Program</Link>
+              <Link href="/committees/organizing" className="font-bold text-white text-lg hover:text-primary-300 transition-colors">Committees</Link>
+              <Link href="/travel/attractions" className="font-bold text-white text-lg hover:text-primary-300 transition-colors">Hotel & Travel</Link>
+            </div>
+            <div className="flex flex-col space-y-4">
+              <Link href="/about/about-us" className="font-bold text-white text-lg hover:text-primary-300 transition-colors">About</Link>
+              <Link href="/about/contact" className="font-bold text-white text-lg hover:text-primary-300 transition-colors">Contact</Link>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Tier 2: Social Media Bar (Cyan/Primary-400) */}
+      <div className="bg-primary-400 py-4">
+        <div className="container-wide flex flex-col md:flex-row justify-between items-center text-primary-950 font-medium">
+          <p className="text-sm md:text-base">&copy; OAIC 2026</p>
+          <div className="flex items-center gap-4 mt-4 md:mt-0">
+            {socialLinks.map(social => (
+              <a key={social.label} href={social.href} aria-label={social.label} className="hover:text-white transition-colors">
+                <social.icon className="h-5 w-5 md:h-6 md:w-6 stroke-[2.5]" />
+              </a>
             ))}
           </div>
         </div>
       </div>
 
-      {/* Bottom Bar */}
-      <div className="bg-primary-900 text-gray-300 py-4">
-        <div className="container-wide flex flex-col md:flex-row justify-between items-center text-sm">
-          <p>&copy; {currentYear} OAIC 2026</p>
-          <div className="flex items-center gap-6 mt-4 md:mt-0">
-            <div className="flex gap-4">
-              {socialLinks.map(social => (
-                <a key={social.label} href={social.href} aria-label={social.label} className="text-gray-400 hover:text-white">
-                  <social.icon className="h-5 w-5" />
-                </a>
-              ))}
-            </div>
-            <div className="h-6 w-px bg-primary-700" />
-            <div className="flex gap-x-4 text-xs">
-              <Link href="#" className="hover:underline">Accessibility</Link>
-              <Link href="#" className="hover:underline">Sitemap</Link>
-              <Link href="#" className="hover:underline">Contact & Support</Link>
-              <Link href="#" className="hover:underline">Home</Link>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* IEEE Copyright Bar */}
-      <div className="bg-gray-100 text-gray-600 text-xs py-3">
-        <div className="container-wide text-center md:text-left">
-          <p>&copy; Copyright {currentYear} Siksha &apos;O&apos; Anusandhan &amp; OAIC – All rights reserved.</p>
+      {/* Tier 3: Utility Links and Copyright (Dark Gray) */}
+      <div className="bg-[#2a2a2a] text-gray-300 py-8">
+        <div className="container-wide">
+          {/* Bottom Row: Copyright Text */}
+          <p className="text-xs md:text-sm text-gray-400 leading-relaxed max-w-5xl">
+            &copy; Copyright {currentYear} Siksha &apos;O&apos; Anusandhan &amp; OAIC – All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
